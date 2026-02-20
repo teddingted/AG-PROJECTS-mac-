@@ -1,0 +1,91 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+🚢
+조선업 커리어 인텔리전스
+뉴스 · 기업 · 연봉 · LinkedIn – 한눈에 보기
+마지막 업데이트: 오후 10:04:21
+[0] (893,57)<button class='btn-refresh' id='btnRefresh'>🔄 데이터 갱신 />
+[1] (500,-137)<div class='panel-body' id='salaryList' scrollable='true' />
+	Wärtsilä (핀란드)
+	📊 2~6년 + 우수한 워라밸 · Glassdoor FI 2024
+	€52,000~72,000/년 (약 7,500만~1.05억)
+	€52,000 ~ €72,000
+	Gas/LNG Application Engineer
+	MAN Energy Solutions (독일)
+	📊 2~6년 · Glassdoor DE 2024
+	€55,000~75,000/년 (약 8,000만~1.1억)
+	€55,000 ~ €75,000
+	LNG Process Engineer
+	글로벌 오일메이저 싱가포르 허브
+	📊 3~7년 (영어 필수) · MyCareersFuture SG 2024
+	SGD $90,000~140,000/년 (약 9,000만~1.4억, 세율 낮음)
+	SGD $90,000 ~ SGD $140,000
+	FSRU Process Engineer
+	Höegh LNG (노르웨이)
+	📊 3~8년 · Glassdoor NO 2024
+	NOK 800,000~1,100,000/년 (약 1.03억~1.42억)
+	NOK 800,000 ~ NOK 1,100,000
+	FLNG Process Engineer
+	Golar LNG (노르웨이)
+	📊 3~8년 · Glassdoor NO 2024
+	NOK 850,000~1,200,000/년 (약 1.1억~1.5억)
+	NOK 850,000 ~ NOK 1,200,000
+	Gas Technology Engineer
+	Lloyd's Register (영국)
+	📊 3~7년 · Glassdoor UK 2024
+	£50,000~70,000/년 (약 8,000만~1.13억)
+	£50,000 ~ £70,000
+	Chemical/Process Engineer - LNG
+	Wood Group (영국/싱가포르/UAE)
+	📊 3~8년 · Glassdoor UK 2024
+	£55,000~80,000/년 (약 9,000만~1.3억)
+	£55,000 ~ £80,000
+	Integrated Gas Process Engineer
+	Shell (네덜란드/싱가포르)
+	📊 3~8년 · Glassdoor NL 2024
+	€65,000~95,000/년 + 보너스 (약 9,500만~1.4억)
+	€65,000 ~ €95,000
+	Principal Engineer - Liquefaction
+	QatarEnergy (카타르, 면세)
+	📊 10년+ / 박사 선호 · 업계 네트워크 2024
+	USD $160,000~220,000/년 + 패키지
+	$160,000 ~ $220,000
+	Senior Process Engineer - LNG
+	QatarEnergy (카타르, 면세)
+	📊 5~12년 · LinkedIn / 업계 네트워크 2024
+	USD $100,000~160,000/년 + 주거/차량 제공
+	$100,000 ~ $160,000
+🔗
+LinkedIn 네트워크
+팔로우 가이드
+[2] (120,321)<div class='tab active'>기업 페이지 />
+[3] (218,321)<div class='tab'>그룹 />
+[4] (309,321)<div class='tab'>채용 검색 />
+[5] (500,668)<div class='panel-body' id='linkedinPanel' scrollable='true'>✅ 팔로우 추천 기업 페이지 (13개) />
+	✅ 팔로우 추천 기업 페이지 (13개)
+	GTT (Gaztransport & Technigaz) ⭐
+	LNG 격납시스템 세계 1위. 귀하의 LNG 공정 배경과 가장 직결되는 회사. 프랑스 파리 근교.
+	[6] (876,443)<a class='btn-follow' href='https://www.linkedin.com/company/gtt-gaztransport-technigaz/'>🔗 팔로우 />
+	QatarEnergy ⭐
+	최고 연봉 타겟. 면세+주거+차량 지원. 2030 LNG 증산으로 대규모 채용 중.
+	[7] (876,525)<a class='btn-follow' href='https://www.linkedin.com/company/qatarenergy/'>🔗 팔로우 />
+	Shell ⭐
+	LNG 글로벌 최대 트레이더. Integrated Gas 부문 Process Engineer 채용 활발.
+	[8] (876,608)<a class='btn-follow' href='https://www.linkedin.com/company/shell/'>🔗 팔로우 />
+	TotalEnergies
+	프랑스 LNG 메이저. 화학공학 석사 Process Engineer 수시 채용.
+	[9] (876,690)<a class='btn-follow' href='https://www.linkedin.com/company/totalenergies/'>🔗 팔로우 />
+	TechnipFMC
+	LNG 플랜트 EPC 선두. 액화 공정 설계 엔지니어 핵심 채용처.
+	[10] (876,772)<a class='btn-follow' href='https://www.linkedin.com/company/technipfmc/'>🔗 팔로우 />
+	Wärtsilä
+	LNG 가스핸들링·재기화 솔루션. 핀란드 본사, 워라밸 우수.
+	[11] (876,854)<a class='btn-follow' href='https://www.linkedin.com/company/wartsila/'>🔗 팔로우 />
+	Golar LNG
+	FLNG 개척자. 노르웨이 오슬로. Liquefaction Engineer 핵심 채용처.
+	[12] (876,936)<a class='btn-follow' href='https://www.linkedin.com/company/golar-lng/'>🔗 팔로우 />
+	Höegh LNG
+
+</current_dom>

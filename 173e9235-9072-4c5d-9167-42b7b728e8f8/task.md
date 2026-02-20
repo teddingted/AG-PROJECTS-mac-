@@ -11,3 +11,8 @@
 - [x] Create `Project1-AutoPlotDigitizer` and `Project2-FitnessApp` directories
 - [x] Move corresponding directories into the project folders via `git mv`
 - [x] Commit and push the structural changes
+
+# Git Repository Fixes
+- [x] Resolve GitHub 100MB file limit error caused by `AutoPlotDigitizerV1_Windows_Port/venv`
+- [x] Untrack `venv` and rewrite recent local commits
+- [x] Force push successful payload to `<origin/main>`

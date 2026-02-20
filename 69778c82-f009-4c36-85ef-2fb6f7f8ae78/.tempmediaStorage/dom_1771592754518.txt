@@ -1,0 +1,57 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+🚢
+조선업 커리어 인텔리전스
+뉴스 · 기업 · 연봉 · LinkedIn – 한눈에 보기
+마지막 업데이트: 오후 10:04:21
+[0] (893,57)<button class='btn-refresh' id='btnRefresh'>🔄 데이터 갱신 />
+📰
+15
+수집된 뉴스
+🏢
+15
+주요 조선사
+💼
+28
+채용 공고
+💰
+22
+연봉 데이터
+📰
+업계 뉴스
+10건
+[1] (95,531)<div class='tab'>전체 />
+[2] (176,531)<div class='tab'>한국어 />
+[3] (270,531)<div class='tab active'>English />
+[4] (500,878)<div class='panel-body' id='newsList' scrollable='true' />
+	[5] (493,620)<a class='news-item' href='https://maritime-executive.com/port-news' />
+		[6] (493,590)<div  />
+			[7] (412,590)<div >Port of Los Angeles Expects Continued Weakness After January Decline />
+			[8] (854,590)<span >Maritime Executive />
+		[9] (493,622)<div >Ports />
+		[10] (493,651)<div  />
+			[11] (93,651)<span >2026-02-20 />
+			[12] (896,651)<span  />
+	[13] (493,742)<a class='news-item' href='https://maritime-executive.com/cruiseshipping-news' />
+		[14] (493,713)<div  />
+			[15] (412,713)<div >Norwegian Cruise Line Holdings Adds Three Ships Extending Orders to 2037 />
+			[16] (854,712)<span >Maritime Executive />
+		[17] (493,745)<div >Cruise Ships />
+		[18] (493,774)<div  />
+			[19] (93,774)<span >2026-02-20 />
+			[20] (896,774)<span  />
+	[21] (493,865)<a class='news-item' href='https://maritime-executive.com/Corporate-news' />
+		[22] (493,835)<div  />
+			[23] (412,835)<div >Kongsberg Discovery Pushes Electromagnetic Sensing Envelope />
+			[24] (854,835)<span >Maritime Executive />
+		[25] (493,867)<div >Corporate News />
+		[26] (493,896)<div  />
+			[27] (93,896)<span >2026-02-20 />
+			[28] (896,896)<span  />
+	Turkey's State Oil Company Joins Shell in Black Sea E&P Venture
+	[29] (854,957)<span >Maritime Executive />
+	Government
+
+</current_dom>

@@ -7,6 +7,7 @@
 
 # 2. AI 임시 리소스 및 로그 (버전 관리 불필요)
 tempmediaStorage/
+.tempmediaStorage/
 
 # 3. AI 내부 상태 및 메타 데이터 파일 (매우 빈번하게 변경됨)
 *.resolved
@@ -14,13 +15,22 @@ tempmediaStorage/
 *.metadata.json
 
 # 4. 자동 생성/첨부된 미디어 이미지 무시
-media__*.png
-media__*.jpg
-media__*.jpeg
-media__*.webp
-# Python virtual environments and caches
+media__*
+*.webp
+# AI 세션 내 자동 생성 이미지 (UUID 폴더 내부)
+**/media_*.png
+**/media_*.jpg
+**/dom_*.txt
+**/*_verification_*.webp
+**/*_verify_*.webp
+# 5. Python 가상환경 및 캐시 (절대 커밋 금지 - 용량 수백MB)
 venv/
 .venv/
 env/
 __pycache__/
 *.pyc
+*.pyo
+
+# 6. 로그 파일
+logs/
+*.log

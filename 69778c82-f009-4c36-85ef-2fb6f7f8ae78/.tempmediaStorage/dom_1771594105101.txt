@@ -1,0 +1,64 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+🚢
+조선업 커리어 인텔리전스
+뉴스 · 기업 · 연봉 · LinkedIn – 한눈에 보기
+업데이트: 오후 10:28:21
+[0] (766,50)<button class='btn btn-primary'>🔄 갱신 />
+[1] (902,50)<div class='profile-badge' />
+	[2] (862,50)<div >👤 />
+	[3] (926,50)<div  />
+		[4] (926,41)<div >내 프로필 />
+		[5] (926,60)<div >⚙️ 설정하기 />
+📰
+31
+조선 뉴스
+🏢
+15
+타겟 기업
+💼
+28
+채용 공고
+💰
+22
+연봉 데이터
+📰
+업계 뉴스
+31건
+[6] (106,468)<div class='tab active'>🇰🇷 조선 3사 />
+[7] (205,468)<div class='tab'>📋 정책 />
+[8] (317,468)<div class='tab masga'>🌍 MASGA·국제 />
+[9] (500,780)<div class='pbody' id='newsList' scrollable='true' />
+	[10] (493,534)<a class='news-item' href='http://www.monthlymaritimekorea.com/news/articleView.html?idxno=56151' />
+		[11] (493,521)<div  />
+			[12] (454,521)<div >1한국해대,  ‘국가 AI 전략 글로벌 포럼’ 성료 />
+			[13] (903,523)<span >해양한국 />
+		[14] (493,549)<div >2026-02-20 />
+	[15] (493,615)<a class='news-item' href='http://www.monthlymaritimekorea.com/news/articleView.html?idxno=56172' />
+		[16] (493,602)<div  />
+			[17] (454,602)<div >부산항, 자동화 넘어 AI 항만으로 />
+			[18] (903,603)<span >해양한국 />
+		[19] (493,629)<div >2026-02-20 />
+	[20] (493,695)<a class='news-item' href='https://news.google.com/rss/articles/CBMie0FVX3lxTE9FdmQ1RHhGN3RqMGNXMWRFX2pMRnJ2b1VQSktDU0hGekRVei01azUxcURpZml5SHNYMEtxTm1QVGVNTWlBbWg0YjQxMHhVTGNUUHI2U25vcG8tY0xoeU8zU0JzcGZ4Z3VuUUN1M3dnd0xzOGJtbm9sUEVFNA?oc=5' />
+		[21] (493,682)<div  />
+			[22] (410,682)<div >[현대미포·삼호] HD현대미포, 조선해양부문 계열사 간 합병 추진 소식에 12%대↑ - 뉴데일리 경제 />
+			[23] (859,684)<span >현대미포·삼호 (구글뉴스) />
+		[24] (493,710)<div >Wed, 27 Au />
+	[25] (493,788)<a class='news-item' href='https://news.google.com/rss/articles/CBMiWkFVX3lxTFAxVHBlOXBsMEhaUThjcl9DWHZ1NjdyM0lGb19OejhCZGYzemo4MEg1Nk13dEZkekNZVU1XeGV1MDNRakZGazJSS0ZmNHRFRExNM3NLVXlFSmUwdw?oc=5' />
+		[26] (493,775)<div  />
+			[27] (410,775)<div >[현대미포·삼호] HD현대중공업과 현대미포조선 합병… 글로벌 초격차로 K-조선·방산 도약 - weeklypeople.net />
+			[28] (859,764)<span >현대미포·삼호 (구글뉴스) />
+		[29] (493,815)<div >Sun, 30 No />
+	[30] (493,881)<a class='news-item' href='https://news.google.com/rss/articles/CBMibEFVX3lxTE1IMGRMVXdoVS1iNS1zMXdXUjBCWEl5blUxdFptZHV0ZHVIUzNua01XWnYyQmI3TXNvUzdRamd3YkFkN216bV8xdThTNFlvU2NySmFIYTlFdS12WGExU0Flam1GMkp0dS02V0ZuUA?oc=5' />
+		[31] (493,868)<div  />
+			[32] (410,868)<div >[현대미포·삼호] HD현대미포, 조선해양부문 계열사 합병 추진설…12%대 급등 - 매거진한경 />
+			[33] (859,870)<span >현대미포·삼호 (구글뉴스) />
+		[34] (493,896)<div >Wed, 27 Au />
+	[35] (410,949)<div >[현대미포·삼호] 현대삼호중공업, 프랑스 EDF에 LNG 운반선 ‘엘리사 할시온’ 인도 - 글로벌이코노믹 />
+	[36] (859,950)<span >현대미포·삼호 (구글뉴스) />
+	Sat, 08 No
+[37] (1500,500)<div class='profile-panel' id='profilePanel' scrollable='true' />
+
+</current_dom>

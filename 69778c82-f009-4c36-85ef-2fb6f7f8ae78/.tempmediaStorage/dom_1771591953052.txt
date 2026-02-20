@@ -1,0 +1,97 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+🚢
+조선업 커리어 인텔리전스
+뉴스 · 기업 · 연봉 · LinkedIn – 한눈에 보기
+마지막 업데이트: 오후 9:52:18
+[0] (893,57)<button class='btn-refresh' id='btnRefresh'>🔄 데이터 갱신 />
+[1] (500,-194)<div class='panel-body' id='companyPanel' scrollable='true' />
+	HD Hyundai Samho
+	벌크선, 탱커, LNG선 건조. 전남 영암 소재 대형 조선소. HD현대 계열.
+	📍 전라남도 영암군
+	👥 약 4,000명
+	🌐 홈페이지
+	💼 채용
+	🔗 LinkedIn
+	현대미포조선
+	Hyundai Mipo Dockyard
+	중형선박 전문 (PC선, MR탱커, 컨테이너). HD현대 계열. 안정적 수주잔량 보유.
+	📍 울산광역시
+	👥 약 5,000명
+	🌐 홈페이지
+	💼 채용
+	🔗 LinkedIn
+	HD현대마린솔루션
+	HD Hyundai Marine Solution
+	선박 애프터마켓 서비스, 엔진 MRO, 디지털 솔루션. HD현대 그룹사. 성장주로 주목.
+	📍 서울특별시
+	👥 약 2,500명
+	🌐 홈페이지
+	💼 채용
+	🔗 LinkedIn
+	한화오션
+	Hanwha Ocean (구 DSME)
+	한화그룹 인수 후 성장중. 잠수함, LNG선, 해양플랜트 특화. 방산+민간 시너지.
+	📍 경상남도 거제시
+	👥 약 9,000명
+	🌐 홈페이지
+	💼 채용
+	🔗 LinkedIn
+	삼성중공업
+	Samsung Heavy Industries
+	LNG선, FLNG, 드릴십 전문. 거제조선소 운영. 스마트 조선소 전환 선도.
+	📍 경상남도 거제시
+	👥 약 10,000명
+	🌐 홈페이지
+	💼 채용
+	🔗 LinkedIn
+💰
+연봉 정보
+20건
+[2] (90,271)<button class='filter-btn active'>전체 />
+[3] (198,271)<button class='filter-btn'>설계/엔지니어링 />
+[4] (323,271)<button class='filter-btn'>생산/현장 />
+[5] (427,271)<button class='filter-btn'>연구/개발 />
+[6] (532,271)<button class='filter-btn'>영업/관리 />
+[7] (642,271)<button class='filter-btn'>기업별 평균 />
+[8] (500,625)<div class='panel-body' id='salaryList' scrollable='true' />
+	직원 평균 연봉
+	HD현대마린솔루션
+	📊 전체 평균 · 크레딧잡 2024
+	6,800만원
+	4,500만원 ~ 1.1억원
+	직원 평균 연봉
+	현대미포조선
+	📊 전체 평균 · 크레딧잡 2024
+	6,500만원
+	4,000만원 ~ 1.0억원
+	직원 평균 연봉
+	한화오션
+	📊 전체 평균 · 크레딧잡 2024
+	6,900만원
+	4,200만원 ~ 1.1억원
+	직원 평균 연봉
+	삼성중공업
+	📊 전체 평균 · 크레딧잡 2024
+	7,800만원
+	5,000만원 ~ 1.3억원
+	직원 평균 연봉
+	HD현대중공업
+	📊 전체 평균 · 크레딧잡 2024
+	7,200만원
+	4,500만원 ~ 1.2억원
+	구매/조달 (Procurement)
+	업계 평균
+	📊 3~8년 · 업계 평균
+	4,700만원
+	3,700만원 ~ 6,500만원
+	프로젝트 매니저 (PM)
+	업계 평균
+	📊 7~15년 · 업계 평균
+	6,800만원
+	5,500만원 ~ 10,000만원
+🔗
+
+</current_dom>

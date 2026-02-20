@@ -1,0 +1,49 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+🚢
+조선업 커리어 인텔리전스
+뉴스 · 기업 · 연봉 · LinkedIn – 한눈에 보기
+마지막 업데이트: 오후 9:52:18
+[0] (893,57)<button class='btn-refresh' id='btnRefresh'>🔄 데이터 갱신 />
+📰
+1
+수집된 뉴스
+🏢
+8
+주요 조선사
+💼
+40
+채용 공고
+💰
+20
+연봉 데이터
+📰
+업계 뉴스
+1건
+[1] (95,531)<div class='tab active'>전체 />
+[2] (176,531)<div class='tab'>한국어 />
+[3] (270,531)<div class='tab'>English />
+[4] (500,605)<a class='news-item' href='https://biz.chosun.com/industry/business-venture/2025/08/23/CHHSSMIBJVFXJNHXODPWTIWSDE/' />
+	[5] (500,590)<div  />
+		[6] (442,590)<div >[반론보도]「'계약해지 배후에 민희진' 탬퍼링 증거 제시한 어도어 뉴진스와 가처분 향방은」기사 관련 />
+		[7] (891,590)<span >조선일보 산업 />
+	[8] (500,621)<div  />
+		[9] (93,621)<span >2026-02-20 />
+		[10] (911,621)<span  />
+🏢
+기업 탐색 & 채용
+8개사
+[11] (112,790)<div class='tab active'>기업 정보 />
+[12] (220,790)<div class='tab'>채용 공고 />
+[13] (500,1137)<div class='panel-body' id='companyPanel' scrollable='true' />
+	대선조선
+	Daeun Shipbuilding
+	소형 특수선(도선, 여객선, 해경함) 전문 중견 조선사. 부산 소재.
+	📍 부산광역시
+	👥 약 500명
+	[14] (113,999)<a class='company-link link-web' href='https://www.daeunship.co.kr'>🌐 홈페이지 />
+	[15] (221,999)<a class='company-link link-job' href='https://www.daeunship.co.kr'>💼 채용 />
+
+</current_dom>
