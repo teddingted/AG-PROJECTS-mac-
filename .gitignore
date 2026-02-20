@@ -18,3 +18,9 @@ media__*.png
 media__*.jpg
 media__*.jpeg
 media__*.webp
+# Python virtual environments and caches
+venv/
+.venv/
+env/
+__pycache__/
+*.pyc
