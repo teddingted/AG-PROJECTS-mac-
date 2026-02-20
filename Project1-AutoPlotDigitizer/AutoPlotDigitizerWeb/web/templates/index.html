@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoPlotDigitizer Web</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}?v=6.1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/color_picker.css') }}?v=6.1">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>📊 AutoPlotDigitizer</h1>
+            <p class="subtitle">Cross-Platform Graph Data Extraction</p>
+        </header>
+
+        <div class="main-content">
+            <!-- Upload Section -->
+            <div class="section" id="upload-section">
+                <h2>1. Upload Graph Image</h2>
+                <div class="upload-area" id="upload-area">
+                    <div class="upload-content">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12" />
+                        </svg>
+                        <p>Drag & Drop Image Here</p>
+                        <p class="small">or click to browse</p>
+                    </div>
+                    <input type="file" id="file-input" accept="image/*" hidden>
+                </div>
+            </div>
+
+            <!-- Canvas Section -->
+            <div class="section" id="canvas-section" style="display:none;">
+                <h2>2. Image & Calibration</h2>
+                <div class="canvas-container">
+                    <canvas id="image-canvas"></canvas>
+                </div>
+                <div class="info-bar">
+                    <span id="image-info"></span>
+                    <span id="mode-info">Mode: <strong id="current-mode">View</strong></span>
+                </div>
+            </div>
+
+            <!-- Controls Section -->
+            <div class="section" id="controls-section" style="display:none;">
+                <h2>3. Actions</h2>
+                <div class="button-grid">
+                    <button class="btn btn-primary" id="calibrate-btn">
+                        🎯 Calibrate Axes
+                    </button>
+                    <button class="btn btn-info" id="guided-btn" disabled>
+                        🎯 Guided Mode
+                    </button>
+                    <button class="btn btn-secondary" id="manual-btn" disabled>
+                        ✏️ Manual Points
+                    </button>
+                    <button class="btn btn-danger" id="delete-mode-btn" disabled>
+                        ❌ Remove Graph
+                    </button>
+                    <button class="btn btn-warning" id="export-btn" disabled>
+                        📥 Export CSV
+                    </button>
+                    <button class="btn btn-danger" id="clear-btn">
+                        🗑️ Clear All
+                    </button>
+                </div>
+
+                <!-- Line Style Options -->
+                <div id="line-style-options" style="display:none; margin-top: 20px;">
+                    <h3 style="color: #003882; margin-bottom: 10px;">Sort Series By:</h3>
+                    <div class="button-grid">
+                        <button class="btn btn-success" id="sort-color-btn">
+                            🎨 Color
+                        </button>
+                        <button class="btn btn-info" id="sort-style-btn">
+                            📏 Line Style
+                        </button>
+                        <button class="btn btn-primary" id="sort-both-btn">
+                            🔍 Color + Style
+                        </button>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <h3>3. Detection</h3>
+                    <div class="btn-group">
+                        <button id="btn-auto-detect" class="btn btn-secondary">Auto Mode</button>
+                        <button id="btn-guided-detect" class="btn btn-primary">Guided Mode (Color)</button>
+                    </div>
+                    <div style="margin-top: 10px;">
+                        <button id="btn-debug-image" class="btn btn-warning" style="width: 100%;">📸 Generate Debug
+                            Image (Desktop)</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data Table -->
+            <div class="section" id="data-section" style="display:none;">
+                <h2>4. Extracted Data</h2>
+                <div class="data-stats" id="data-stats"></div>
+                <div class="table-container">
+                    <table id="data-table">
+                        <thead>
+                            <tr>
+                                <th>Graph ID</th>
+                                <th>X</th>
+                                <th>Y</th>
+                            </tr>
+                        </thead>
+                        <tbody id="data-tbody"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Detection Method Modal -->
+    <div class="modal" id="detection-method-modal">
+        <div class="modal-content">
+            <h3>Select Detection Method</h3>
+            <p style="color: #666; margin-bottom: 20px;">How should the app extract graph data?</p>
+            <div class="button-grid">
+                <button class="btn btn-success" id="method-color-btn">
+                    🎨 Color Only<br>
+                    <small style="font-size: 0.8em; font-weight: normal;">Similar colors</small>
+                </button>
+                <button class="btn btn-info" id="method-style-btn">
+                    📏 Line Style Only<br>
+                    <small style="font-size: 0.8em; font-weight: normal;">Solid/Dotted/Dashed</small>
+                </button>
+                <button class="btn btn-primary" id="method-both-btn">
+                    🔍 Both<br>
+                    <small style="font-size: 0.8em; font-weight: normal;">Color + Style</small>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Calibration Modal -->
+    <div class="modal" id="calibration-modal">
+        <div class="modal-content">
+            <h3>Enter Axis Values</h3>
+            <div class="form-group">
+                <label>X-axis START value:</label>
+                <input type="number" id="x1-val" value="0" step="any">
+            </div>
+            <div class="form-group">
+                <label>X-axis END value:</label>
+                <input type="number" id="x2-val" value="10" step="any">
+            </div>
+            <div class="form-group">
+                <label>Y-axis START value (bottom):</label>
+                <input type="number" id="y1-val" value="0" step="any">
+            </div>
+            <div class="form-group">
+                <label>Y-axis END value (top):</label>
+                <input type="number" id="y2-val" value="100" step="any">
+            </div>
+            <div class="modal-buttons">
+                <button class="btn btn-secondary" id="cancel-cal-btn">Cancel</button>
+                <button class="btn btn-primary" id="confirm-cal-btn">Confirm</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loading-overlay">
+        <div class="spinner"></div>
+        <p>Processing...</p>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}?v=6.1"></script>
+    <script src="{{ url_for('static', filename='js/color_picker.js') }}?v=6.1"></script>
+</body>
+
+</html>

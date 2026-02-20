@@ -1,0 +1,887 @@
+🚀 Starting AutoPlotDigitizer Web...
+📅 Date: Tue Feb 17 15:58:06 KST 2026
+
+🚀 Starting AutoPlotDigitizer Web...
+📅 Date: Tue Feb 17 15:58:30 KST 2026
+
+Using Python: Python 3.9.6
+📦 Checking dependencies...
+Requirement already satisfied: flask in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from -r requirements.txt (line 1)) (3.1.2)
+Requirement already satisfied: opencv-python in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from -r requirements.txt (line 2)) (4.13.0.92)
+Requirement already satisfied: numpy in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from -r requirements.txt (line 3)) (2.0.2)
+Requirement already satisfied: scikit-learn in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from -r requirements.txt (line 4)) (1.6.1)
+Requirement already satisfied: werkzeug in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from -r requirements.txt (line 5)) (3.1.5)
+Requirement already satisfied: importlib-metadata>=3.6.0 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from flask->-r requirements.txt (line 1)) (8.7.1)
+Requirement already satisfied: markupsafe>=2.1.1 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from flask->-r requirements.txt (line 1)) (3.0.3)
+Requirement already satisfied: click>=8.1.3 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from flask->-r requirements.txt (line 1)) (8.1.8)
+Requirement already satisfied: itsdangerous>=2.2.0 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from flask->-r requirements.txt (line 1)) (2.2.0)
+Requirement already satisfied: jinja2>=3.1.2 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from flask->-r requirements.txt (line 1)) (3.1.6)
+Requirement already satisfied: blinker>=1.9.0 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from flask->-r requirements.txt (line 1)) (1.9.0)
+Requirement already satisfied: joblib>=1.2.0 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from scikit-learn->-r requirements.txt (line 4)) (1.5.3)
+Requirement already satisfied: threadpoolctl>=3.1.0 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from scikit-learn->-r requirements.txt (line 4)) (3.6.0)
+Requirement already satisfied: scipy>=1.6.0 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from scikit-learn->-r requirements.txt (line 4)) (1.13.1)
+Requirement already satisfied: zipp>=3.20 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from importlib-metadata>=3.6.0->flask->-r requirements.txt (line 1)) (3.23.0)
+✅ Setup complete! Running app...
+
+Traceback (most recent call last):
+  File "/Users/dm_chamber/Desktop/AutoPlotDigitizerWeb/app.py", line 31, in <module>
+    app.json = CustomJSONEncoder(app)
+TypeError: __init__() takes 1 positional argument but 2 were given
+🚀 Starting AutoPlotDigitizer Web...
+📅 Date: Tue Feb 17 15:59:00 KST 2026
+
+Using Python: Python 3.9.6
+📦 Checking dependencies...
+Requirement already satisfied: flask in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from -r requirements.txt (line 1)) (3.1.2)
+Requirement already satisfied: opencv-python in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from -r requirements.txt (line 2)) (4.13.0.92)
+Requirement already satisfied: numpy in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from -r requirements.txt (line 3)) (2.0.2)
+Requirement already satisfied: scikit-learn in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from -r requirements.txt (line 4)) (1.6.1)
+Requirement already satisfied: werkzeug in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from -r requirements.txt (line 5)) (3.1.5)
+Requirement already satisfied: click>=8.1.3 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from flask->-r requirements.txt (line 1)) (8.1.8)
+Requirement already satisfied: jinja2>=3.1.2 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from flask->-r requirements.txt (line 1)) (3.1.6)
+Requirement already satisfied: blinker>=1.9.0 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from flask->-r requirements.txt (line 1)) (1.9.0)
+Requirement already satisfied: markupsafe>=2.1.1 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from flask->-r requirements.txt (line 1)) (3.0.3)
+Requirement already satisfied: itsdangerous>=2.2.0 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from flask->-r requirements.txt (line 1)) (2.2.0)
+Requirement already satisfied: importlib-metadata>=3.6.0 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from flask->-r requirements.txt (line 1)) (8.7.1)
+Requirement already satisfied: scipy>=1.6.0 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from scikit-learn->-r requirements.txt (line 4)) (1.13.1)
+Requirement already satisfied: joblib>=1.2.0 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from scikit-learn->-r requirements.txt (line 4)) (1.5.3)
+Requirement already satisfied: threadpoolctl>=3.1.0 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from scikit-learn->-r requirements.txt (line 4)) (3.6.0)
+Requirement already satisfied: zipp>=3.20 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from importlib-metadata>=3.6.0->flask->-r requirements.txt (line 1)) (3.23.0)
+✅ Setup complete! Running app...
+
+  File "/Users/dm_chamber/Desktop/AutoPlotDigitizerWeb/app.py", line 33
+    app.json = CustomProvider(app)
+IndentationError: unexpected indent
+🚀 Starting AutoPlotDigitizer Web...
+📅 Date: Tue Feb 17 15:59:11 KST 2026
+
+Using Python: Python 3.9.6
+📦 Checking dependencies...
+Requirement already satisfied: flask in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from -r requirements.txt (line 1)) (3.1.2)
+Requirement already satisfied: opencv-python in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from -r requirements.txt (line 2)) (4.13.0.92)
+Requirement already satisfied: numpy in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from -r requirements.txt (line 3)) (2.0.2)
+Requirement already satisfied: scikit-learn in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from -r requirements.txt (line 4)) (1.6.1)
+Requirement already satisfied: werkzeug in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from -r requirements.txt (line 5)) (3.1.5)
+Requirement already satisfied: itsdangerous>=2.2.0 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from flask->-r requirements.txt (line 1)) (2.2.0)
+Requirement already satisfied: importlib-metadata>=3.6.0 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from flask->-r requirements.txt (line 1)) (8.7.1)
+Requirement already satisfied: jinja2>=3.1.2 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from flask->-r requirements.txt (line 1)) (3.1.6)
+Requirement already satisfied: blinker>=1.9.0 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from flask->-r requirements.txt (line 1)) (1.9.0)
+Requirement already satisfied: click>=8.1.3 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from flask->-r requirements.txt (line 1)) (8.1.8)
+Requirement already satisfied: markupsafe>=2.1.1 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from flask->-r requirements.txt (line 1)) (3.0.3)
+Requirement already satisfied: scipy>=1.6.0 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from scikit-learn->-r requirements.txt (line 4)) (1.13.1)
+Requirement already satisfied: threadpoolctl>=3.1.0 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from scikit-learn->-r requirements.txt (line 4)) (3.6.0)
+Requirement already satisfied: joblib>=1.2.0 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from scikit-learn->-r requirements.txt (line 4)) (1.5.3)
+Requirement already satisfied: zipp>=3.20 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from importlib-metadata>=3.6.0->flask->-r requirements.txt (line 1)) (3.23.0)
+✅ Setup complete! Running app...
+
+  File "/Users/dm_chamber/Desktop/AutoPlotDigitizerWeb/app.py", line 34
+    app.json_encoder = CustomJSONEncoder
+IndentationError: unexpected indent
+🚀 Starting AutoPlotDigitizer Web...
+📅 Date: Tue Feb 17 15:59:24 KST 2026
+
+Using Python: Python 3.9.6
+📦 Checking dependencies...
+Requirement already satisfied: flask in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from -r requirements.txt (line 1)) (3.1.2)
+Requirement already satisfied: opencv-python in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from -r requirements.txt (line 2)) (4.13.0.92)
+Requirement already satisfied: numpy in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from -r requirements.txt (line 3)) (2.0.2)
+Requirement already satisfied: scikit-learn in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from -r requirements.txt (line 4)) (1.6.1)
+Requirement already satisfied: werkzeug in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from -r requirements.txt (line 5)) (3.1.5)
+Requirement already satisfied: importlib-metadata>=3.6.0 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from flask->-r requirements.txt (line 1)) (8.7.1)
+Requirement already satisfied: jinja2>=3.1.2 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from flask->-r requirements.txt (line 1)) (3.1.6)
+Requirement already satisfied: blinker>=1.9.0 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from flask->-r requirements.txt (line 1)) (1.9.0)
+Requirement already satisfied: click>=8.1.3 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from flask->-r requirements.txt (line 1)) (8.1.8)
+Requirement already satisfied: markupsafe>=2.1.1 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from flask->-r requirements.txt (line 1)) (3.0.3)
+Requirement already satisfied: itsdangerous>=2.2.0 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from flask->-r requirements.txt (line 1)) (2.2.0)
+Requirement already satisfied: scipy>=1.6.0 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from scikit-learn->-r requirements.txt (line 4)) (1.13.1)
+Requirement already satisfied: joblib>=1.2.0 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from scikit-learn->-r requirements.txt (line 4)) (1.5.3)
+Requirement already satisfied: threadpoolctl>=3.1.0 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from scikit-learn->-r requirements.txt (line 4)) (3.6.0)
+Requirement already satisfied: zipp>=3.20 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from importlib-metadata>=3.6.0->flask->-r requirements.txt (line 1)) (3.23.0)
+✅ Setup complete! Running app...
+
+  File "/Users/dm_chamber/Desktop/AutoPlotDigitizerWeb/app.py", line 34
+    app.json_encoder = CustomJSONEncoder
+IndentationError: unexpected indent
+🚀 Starting AutoPlotDigitizer Web...
+📅 Date: Tue Feb 17 15:59:39 KST 2026
+
+Using Python: Python 3.9.6
+📦 Checking dependencies...
+Requirement already satisfied: flask in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from -r requirements.txt (line 1)) (3.1.2)
+Requirement already satisfied: opencv-python in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from -r requirements.txt (line 2)) (4.13.0.92)
+Requirement already satisfied: numpy in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from -r requirements.txt (line 3)) (2.0.2)
+Requirement already satisfied: scikit-learn in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from -r requirements.txt (line 4)) (1.6.1)
+Requirement already satisfied: werkzeug in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from -r requirements.txt (line 5)) (3.1.5)
+Requirement already satisfied: importlib-metadata>=3.6.0 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from flask->-r requirements.txt (line 1)) (8.7.1)
+Requirement already satisfied: blinker>=1.9.0 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from flask->-r requirements.txt (line 1)) (1.9.0)
+Requirement already satisfied: markupsafe>=2.1.1 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from flask->-r requirements.txt (line 1)) (3.0.3)
+Requirement already satisfied: jinja2>=3.1.2 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from flask->-r requirements.txt (line 1)) (3.1.6)
+Requirement already satisfied: itsdangerous>=2.2.0 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from flask->-r requirements.txt (line 1)) (2.2.0)
+Requirement already satisfied: click>=8.1.3 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from flask->-r requirements.txt (line 1)) (8.1.8)
+Requirement already satisfied: joblib>=1.2.0 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from scikit-learn->-r requirements.txt (line 4)) (1.5.3)
+Requirement already satisfied: scipy>=1.6.0 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from scikit-learn->-r requirements.txt (line 4)) (1.13.1)
+Requirement already satisfied: threadpoolctl>=3.1.0 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from scikit-learn->-r requirements.txt (line 4)) (3.6.0)
+Requirement already satisfied: zipp>=3.20 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from importlib-metadata>=3.6.0->flask->-r requirements.txt (line 1)) (3.23.0)
+✅ Setup complete! Running app...
+
+🚀 AutoPlotDigitizer Web Server Starting...
+📱 Opening browser at http://localhost:8080
+⏹️  Press Ctrl+C to stop
+ * Serving Flask app 'app'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8080
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [17/Feb/2026 15:59:41] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 15:59:41] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 15:59:41] "[36mGET /static/js/color_picker.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 15:59:41] "[36mGET /static/css/color_picker.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 15:59:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-02-17 15:59:41,705 - app - ERROR - Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/werkzeug/routing/map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+127.0.0.1 - - [17/Feb/2026 15:59:41] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+127.0.0.1 - - [17/Feb/2026 15:59:55] "POST /upload HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 16:00:15] "POST /calibrate HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 16:00:32] "POST /detect_auto HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 16:00:44] "POST /detect_auto HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 16:01:29] "POST /upload HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 16:01:48] "POST /calibrate HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 16:01:59] "POST /detect_auto HTTP/1.1" 200 -
+🚀 Starting AutoPlotDigitizer Web...
+📅 Date: Tue Feb 17 16:04:49 KST 2026
+
+Using Python: Python 3.9.6
+📦 Checking dependencies...
+Requirement already satisfied: flask in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from -r requirements.txt (line 1)) (3.1.2)
+Requirement already satisfied: opencv-python in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from -r requirements.txt (line 2)) (4.13.0.92)
+Requirement already satisfied: numpy in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from -r requirements.txt (line 3)) (2.0.2)
+Requirement already satisfied: scikit-learn in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from -r requirements.txt (line 4)) (1.6.1)
+Requirement already satisfied: werkzeug in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from -r requirements.txt (line 5)) (3.1.5)
+Requirement already satisfied: importlib-metadata>=3.6.0 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from flask->-r requirements.txt (line 1)) (8.7.1)
+Requirement already satisfied: click>=8.1.3 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from flask->-r requirements.txt (line 1)) (8.1.8)
+Requirement already satisfied: itsdangerous>=2.2.0 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from flask->-r requirements.txt (line 1)) (2.2.0)
+Requirement already satisfied: blinker>=1.9.0 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from flask->-r requirements.txt (line 1)) (1.9.0)
+Requirement already satisfied: jinja2>=3.1.2 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from flask->-r requirements.txt (line 1)) (3.1.6)
+Requirement already satisfied: markupsafe>=2.1.1 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from flask->-r requirements.txt (line 1)) (3.0.3)
+Requirement already satisfied: joblib>=1.2.0 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from scikit-learn->-r requirements.txt (line 4)) (1.5.3)
+Requirement already satisfied: threadpoolctl>=3.1.0 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from scikit-learn->-r requirements.txt (line 4)) (3.6.0)
+Requirement already satisfied: scipy>=1.6.0 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from scikit-learn->-r requirements.txt (line 4)) (1.13.1)
+Requirement already satisfied: zipp>=3.20 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from importlib-metadata>=3.6.0->flask->-r requirements.txt (line 1)) (3.23.0)
+✅ Setup complete! Running app...
+
+🚀 AutoPlotDigitizer Web Server Starting...
+📱 Opening browser at http://localhost:8080
+⏹️  Press Ctrl+C to stop
+ * Serving Flask app 'app'
+ * Debug mode: on
+Address already in use
+Port 8080 is in use by another program. Either identify and stop that program, or start the server with a different port.
+127.0.0.1 - - [17/Feb/2026 16:04:51] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 16:04:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 16:04:51] "[36mGET /static/css/color_picker.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 16:04:51] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 16:04:51] "[36mGET /static/js/color_picker.js HTTP/1.1[0m" 304 -
+2026-02-17 16:04:51,863 - app - ERROR - Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/werkzeug/routing/map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+127.0.0.1 - - [17/Feb/2026 16:04:51] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/multiprocessing/resource_tracker.py:216: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+🚀 Starting AutoPlotDigitizer Web...
+📅 Date: Tue Feb 17 16:05:17 KST 2026
+
+Using Python: Python 3.9.6
+📦 Checking dependencies...
+Requirement already satisfied: flask in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from -r requirements.txt (line 1)) (3.1.2)
+Requirement already satisfied: opencv-python in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from -r requirements.txt (line 2)) (4.13.0.92)
+Requirement already satisfied: numpy in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from -r requirements.txt (line 3)) (2.0.2)
+Requirement already satisfied: scikit-learn in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from -r requirements.txt (line 4)) (1.6.1)
+Requirement already satisfied: werkzeug in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from -r requirements.txt (line 5)) (3.1.5)
+Requirement already satisfied: jinja2>=3.1.2 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from flask->-r requirements.txt (line 1)) (3.1.6)
+Requirement already satisfied: blinker>=1.9.0 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from flask->-r requirements.txt (line 1)) (1.9.0)
+Requirement already satisfied: markupsafe>=2.1.1 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from flask->-r requirements.txt (line 1)) (3.0.3)
+Requirement already satisfied: itsdangerous>=2.2.0 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from flask->-r requirements.txt (line 1)) (2.2.0)
+Requirement already satisfied: click>=8.1.3 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from flask->-r requirements.txt (line 1)) (8.1.8)
+Requirement already satisfied: importlib-metadata>=3.6.0 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from flask->-r requirements.txt (line 1)) (8.7.1)
+Requirement already satisfied: scipy>=1.6.0 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from scikit-learn->-r requirements.txt (line 4)) (1.13.1)
+Requirement already satisfied: threadpoolctl>=3.1.0 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from scikit-learn->-r requirements.txt (line 4)) (3.6.0)
+Requirement already satisfied: joblib>=1.2.0 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from scikit-learn->-r requirements.txt (line 4)) (1.5.3)
+Requirement already satisfied: zipp>=3.20 in /Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages (from importlib-metadata>=3.6.0->flask->-r requirements.txt (line 1)) (3.23.0)
+✅ Setup complete! Running app...
+
+🚀 AutoPlotDigitizer Web Server Starting...
+📱 Opening browser at http://localhost:8080
+⏹️  Press Ctrl+C to stop
+ * Serving Flask app 'app'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8080
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [17/Feb/2026 16:05:19] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 16:05:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 16:05:19] "[36mGET /static/css/color_picker.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 16:05:19] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 16:05:19] "[36mGET /static/js/color_picker.js HTTP/1.1[0m" 304 -
+2026-02-17 16:05:19,227 - app - ERROR - Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/werkzeug/routing/map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+127.0.0.1 - - [17/Feb/2026 16:05:19] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+127.0.0.1 - - [17/Feb/2026 16:05:47] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 16:05:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 16:05:47] "[36mGET /static/css/color_picker.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 16:05:47] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 16:05:47] "[36mGET /static/js/color_picker.js HTTP/1.1[0m" 304 -
+2026-02-17 16:05:47,740 - app - ERROR - Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/werkzeug/routing/map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+127.0.0.1 - - [17/Feb/2026 16:05:47] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+127.0.0.1 - - [17/Feb/2026 16:05:51] "POST /upload HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 16:06:07] "POST /calibrate HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 16:06:19] "POST /detect_auto HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 16:07:02] "POST /detect_auto HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 16:07:15] "POST /detect_auto HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 16:08:48] "POST /upload HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 16:09:08] "POST /calibrate HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 16:09:17] "POST /detect_auto HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 16:27:13] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 16:27:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 16:27:13] "[36mGET /static/css/color_picker.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 16:27:13] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 16:27:13] "[36mGET /static/js/color_picker.js HTTP/1.1[0m" 304 -
+2026-02-17 16:27:13,354 - app - ERROR - Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/werkzeug/routing/map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+127.0.0.1 - - [17/Feb/2026 16:27:13] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+127.0.0.1 - - [17/Feb/2026 16:27:16] "POST /upload HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 16:27:35] "POST /calibrate HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 16:27:46] "POST /detect_auto HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 16:34:18] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 16:34:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 16:34:18] "[36mGET /static/css/color_picker.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 16:34:18] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 16:34:18] "[36mGET /static/js/color_picker.js HTTP/1.1[0m" 304 -
+2026-02-17 16:34:18,892 - app - ERROR - Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/werkzeug/routing/map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+127.0.0.1 - - [17/Feb/2026 16:34:18] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+127.0.0.1 - - [17/Feb/2026 16:34:22] "POST /upload HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 16:34:41] "POST /calibrate HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 16:34:51] "POST /detect_auto HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 16:35:30] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 16:35:30] "[36mGET /static/css/color_picker.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 16:35:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 16:35:30] "[36mGET /static/js/color_picker.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 16:35:30] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-02-17 16:35:30,887 - app - ERROR - Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/werkzeug/routing/map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+127.0.0.1 - - [17/Feb/2026 16:35:30] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+127.0.0.1 - - [17/Feb/2026 16:35:34] "POST /upload HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 16:35:53] "POST /calibrate HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 16:36:03] "POST /detect_auto HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 16:38:59] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 16:38:59] "[36mGET /static/css/color_picker.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 16:38:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 16:38:59] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 16:38:59] "[36mGET /static/js/color_picker.js HTTP/1.1[0m" 304 -
+2026-02-17 16:38:59,908 - app - ERROR - Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/werkzeug/routing/map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+127.0.0.1 - - [17/Feb/2026 16:38:59] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+127.0.0.1 - - [17/Feb/2026 16:39:05] "POST /upload HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 16:39:22] "POST /calibrate HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 16:39:33] "POST /detect_auto HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 16:43:14] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 16:43:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 16:43:14] "[36mGET /static/css/color_picker.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 16:43:14] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 16:43:14] "[36mGET /static/js/color_picker.js HTTP/1.1[0m" 304 -
+2026-02-17 16:43:14,799 - app - ERROR - Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/werkzeug/routing/map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+127.0.0.1 - - [17/Feb/2026 16:43:14] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+127.0.0.1 - - [17/Feb/2026 16:43:18] "POST /upload HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 16:43:33] "POST /calibrate HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 16:43:44] "POST /detect_auto HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 16:46:45] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 16:46:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 16:46:45] "[36mGET /static/css/color_picker.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 16:46:45] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 16:46:45] "[36mGET /static/js/color_picker.js HTTP/1.1[0m" 304 -
+2026-02-17 16:46:45,929 - app - ERROR - Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/werkzeug/routing/map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+127.0.0.1 - - [17/Feb/2026 16:46:45] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+127.0.0.1 - - [17/Feb/2026 16:46:48] "POST /upload HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 16:47:04] "POST /calibrate HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 16:47:17] "POST /detect_auto HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 16:47:30] "POST /detect_auto HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 16:47:50] "POST /detect_auto HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 16:51:16] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 16:51:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 16:51:16] "[36mGET /static/css/color_picker.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 16:51:16] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 16:51:16] "[36mGET /static/js/color_picker.js HTTP/1.1[0m" 304 -
+2026-02-17 16:51:16,178 - app - ERROR - Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/werkzeug/routing/map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+127.0.0.1 - - [17/Feb/2026 16:51:16] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+127.0.0.1 - - [17/Feb/2026 16:51:25] "POST /upload HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 16:51:44] "POST /calibrate HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 16:51:56] "POST /detect_auto HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 16:52:10] "POST /detect_auto HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 16:52:35] "POST /detect_auto HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 16:52:47] "POST /detect_auto HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 16:53:06] "POST /detect_auto HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 16:53:16] "POST /detect_auto HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 16:56:15] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 16:56:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 16:56:15] "[36mGET /static/css/color_picker.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 16:56:15] "[36mGET /static/js/color_picker.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 16:56:15] "GET /static/js/app.js HTTP/1.1" 200 -
+2026-02-17 16:56:15,231 - app - ERROR - Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/werkzeug/routing/map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+127.0.0.1 - - [17/Feb/2026 16:56:15] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+127.0.0.1 - - [17/Feb/2026 16:56:21] "POST /upload HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 16:56:41] "POST /calibrate HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 16:56:53] "POST /detect_auto HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 16:57:01] "POST /upload HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 16:57:21] "POST /calibrate HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 16:57:32] "POST /detect_auto HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 16:58:05] "POST /detect_auto HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 16:58:14] "POST /detect_auto HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 16:58:23] "POST /detect_auto HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:01:11] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:01:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 17:01:11] "GET /static/js/app.js HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:01:11] "[36mGET /static/css/color_picker.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 17:01:11] "[36mGET /static/js/color_picker.js HTTP/1.1[0m" 304 -
+2026-02-17 17:01:11,808 - app - ERROR - Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/werkzeug/routing/map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+127.0.0.1 - - [17/Feb/2026 17:01:11] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+127.0.0.1 - - [17/Feb/2026 17:01:14] "POST /upload HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:01:38] "POST /calibrate HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:01:50] "POST /detect_auto HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:02:19] "POST /detect_auto HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:02:40] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:02:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 17:02:40] "[36mGET /static/css/color_picker.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 17:02:40] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 17:02:40] "[36mGET /static/js/color_picker.js HTTP/1.1[0m" 304 -
+2026-02-17 17:02:40,677 - app - ERROR - Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/werkzeug/routing/map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+127.0.0.1 - - [17/Feb/2026 17:02:40] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+127.0.0.1 - - [17/Feb/2026 17:02:43] "POST /upload HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:02:59] "POST /calibrate HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:03:06] "POST /detect_auto HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:03:17] "POST /detect_auto HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:06:01] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:06:01] "GET /static/css/style.css?v=6.1 HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:06:01] "GET /static/css/color_picker.css?v=6.1 HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:06:01] "GET /static/js/app.js?v=6.1 HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:06:01] "GET /static/js/color_picker.js?v=6.1 HTTP/1.1" 200 -
+2026-02-17 17:06:01,351 - app - ERROR - Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/werkzeug/routing/map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+127.0.0.1 - - [17/Feb/2026 17:06:01] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+127.0.0.1 - - [17/Feb/2026 17:06:14] "POST /upload HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:06:36] "POST /calibrate HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:06:54] "POST /detect_auto HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:07:06] "POST /detect_auto HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:07:21] "POST /detect_auto HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:09:48] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:09:48] "[36mGET /static/css/style.css?v=6.1 HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 17:09:48] "[36mGET /static/js/app.js?v=6.1 HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 17:09:48] "[36mGET /static/css/color_picker.css?v=6.1 HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 17:09:48] "[36mGET /static/js/color_picker.js?v=6.1 HTTP/1.1[0m" 304 -
+2026-02-17 17:09:48,354 - app - ERROR - Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/werkzeug/routing/map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+127.0.0.1 - - [17/Feb/2026 17:09:48] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+127.0.0.1 - - [17/Feb/2026 17:09:51] "POST /upload HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:10:05] "POST /calibrate HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:10:13] "POST /detect_auto HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:10:22] "POST /detect_auto HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:10:36] "POST /calibrate HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:10:47] "POST /detect_auto HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:10:53] "POST /detect_auto HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:14:00] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:14:00] "[36mGET /static/css/style.css?v=6.1 HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 17:14:00] "[36mGET /static/css/color_picker.css?v=6.1 HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 17:14:00] "[36mGET /static/js/app.js?v=6.1 HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 17:14:00] "[36mGET /static/js/color_picker.js?v=6.1 HTTP/1.1[0m" 304 -
+2026-02-17 17:14:00,719 - app - ERROR - Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/werkzeug/routing/map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+127.0.0.1 - - [17/Feb/2026 17:14:00] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+127.0.0.1 - - [17/Feb/2026 17:14:02] "POST /upload HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:14:18] "POST /calibrate HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:14:29] "POST /detect_auto HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:14:51] "POST /detect_auto HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:15:01] "POST /detect_auto HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:18:51] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:18:51] "[36mGET /static/css/style.css?v=6.1 HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 17:18:51] "GET /static/js/app.js?v=6.1 HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:18:51] "[36mGET /static/css/color_picker.css?v=6.1 HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 17:18:51] "[36mGET /static/js/color_picker.js?v=6.1 HTTP/1.1[0m" 304 -
+2026-02-17 17:18:51,597 - app - ERROR - Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/werkzeug/routing/map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+127.0.0.1 - - [17/Feb/2026 17:18:51] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+127.0.0.1 - - [17/Feb/2026 17:18:58] "POST /upload HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:19:12] "POST /calibrate HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:19:21] "POST /detect_auto HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:22:05] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:22:05] "[36mGET /static/css/style.css?v=6.1 HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 17:22:05] "GET /static/js/app.js?v=6.1 HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:22:05] "[36mGET /static/css/color_picker.css?v=6.1 HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 17:22:05] "[36mGET /static/js/color_picker.js?v=6.1 HTTP/1.1[0m" 304 -
+2026-02-17 17:22:05,898 - app - ERROR - Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/werkzeug/routing/map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+127.0.0.1 - - [17/Feb/2026 17:22:05] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+127.0.0.1 - - [17/Feb/2026 17:22:13] "POST /upload HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:22:28] "POST /calibrate HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:22:36] "POST /detect_auto HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:26:18] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:26:18] "[36mGET /static/css/style.css?v=6.1 HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 17:26:18] "[36mGET /static/js/app.js?v=6.1 HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 17:26:18] "[36mGET /static/css/color_picker.css?v=6.1 HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 17:26:18] "[36mGET /static/js/color_picker.js?v=6.1 HTTP/1.1[0m" 304 -
+2026-02-17 17:26:18,872 - app - ERROR - Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/werkzeug/routing/map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+127.0.0.1 - - [17/Feb/2026 17:26:18] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+127.0.0.1 - - [17/Feb/2026 17:26:21] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:26:21] "[36mGET /static/css/style.css?v=6.1 HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 17:26:21] "[36mGET /static/css/color_picker.css?v=6.1 HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 17:26:21] "[36mGET /static/js/app.js?v=6.1 HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 17:26:21] "[36mGET /static/js/color_picker.js?v=6.1 HTTP/1.1[0m" 304 -
+2026-02-17 17:26:21,497 - app - ERROR - Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/werkzeug/routing/map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+127.0.0.1 - - [17/Feb/2026 17:26:21] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+127.0.0.1 - - [17/Feb/2026 17:26:23] "POST /upload HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:26:38] "POST /calibrate HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:26:46] "POST /detect_auto HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:28:52] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:28:52] "[36mGET /static/css/style.css?v=6.1 HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 17:28:52] "[36mGET /static/css/color_picker.css?v=6.1 HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 17:28:52] "[36mGET /static/js/app.js?v=6.1 HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 17:28:52] "[36mGET /static/js/color_picker.js?v=6.1 HTTP/1.1[0m" 304 -
+2026-02-17 17:28:52,424 - app - ERROR - Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/werkzeug/routing/map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+127.0.0.1 - - [17/Feb/2026 17:28:52] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+127.0.0.1 - - [17/Feb/2026 17:28:54] "POST /upload HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:29:09] "POST /calibrate HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:29:23] "POST /detect_auto HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:30:12] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:30:12] "[36mGET /static/css/style.css?v=6.1 HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 17:30:12] "[36mGET /static/css/color_picker.css?v=6.1 HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 17:30:12] "[36mGET /static/js/app.js?v=6.1 HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 17:30:12] "[36mGET /static/js/color_picker.js?v=6.1 HTTP/1.1[0m" 304 -
+2026-02-17 17:30:12,345 - app - ERROR - Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/werkzeug/routing/map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+127.0.0.1 - - [17/Feb/2026 17:30:12] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+127.0.0.1 - - [17/Feb/2026 17:30:20] "POST /upload HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:30:22] "POST /upload HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:30:35] "POST /calibrate HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:30:43] "POST /detect_auto HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:32:08] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:32:08] "[36mGET /static/css/style.css?v=6.1 HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 17:32:08] "[36mGET /static/js/app.js?v=6.1 HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 17:32:08] "[36mGET /static/js/color_picker.js?v=6.1 HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 17:32:08] "[36mGET /static/css/color_picker.css?v=6.1 HTTP/1.1[0m" 304 -
+2026-02-17 17:32:08,874 - app - ERROR - Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/werkzeug/routing/map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+127.0.0.1 - - [17/Feb/2026 17:32:08] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+127.0.0.1 - - [17/Feb/2026 17:32:15] "POST /upload HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:32:34] "POST /calibrate HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:32:41] "POST /detect_auto HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:34:46] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:34:46] "[36mGET /static/css/style.css?v=6.1 HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 17:34:46] "[36mGET /static/css/color_picker.css?v=6.1 HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 17:34:46] "[36mGET /static/js/app.js?v=6.1 HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 17:34:46] "[36mGET /static/js/color_picker.js?v=6.1 HTTP/1.1[0m" 304 -
+2026-02-17 17:34:46,662 - app - ERROR - Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/werkzeug/routing/map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+127.0.0.1 - - [17/Feb/2026 17:34:46] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+127.0.0.1 - - [17/Feb/2026 17:35:27] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:35:27] "[36mGET /static/css/style.css?v=6.1 HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 17:35:27] "[36mGET /static/css/color_picker.css?v=6.1 HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 17:35:27] "[36mGET /static/js/color_picker.js?v=6.1 HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 17:35:27] "GET /static/js/app.js?v=6.1 HTTP/1.1" 200 -
+2026-02-17 17:35:27,149 - app - ERROR - Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/werkzeug/routing/map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+127.0.0.1 - - [17/Feb/2026 17:35:27] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+127.0.0.1 - - [17/Feb/2026 17:35:29] "POST /upload HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:35:47] "POST /calibrate HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:36:03] "POST /detect_auto HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:36:09] "POST /detect_auto HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:36:23] "POST /detect_auto HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:36:54] "POST /detect_auto HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:38:40] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:38:40] "[36mGET /static/css/style.css?v=6.1 HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 17:38:40] "[36mGET /static/css/color_picker.css?v=6.1 HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 17:38:40] "GET /static/js/app.js?v=6.1 HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:38:40] "[36mGET /static/js/color_picker.js?v=6.1 HTTP/1.1[0m" 304 -
+2026-02-17 17:38:40,215 - app - ERROR - Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/werkzeug/routing/map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+127.0.0.1 - - [17/Feb/2026 17:38:40] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+127.0.0.1 - - [17/Feb/2026 17:38:42] "POST /upload HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:38:55] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:38:56] "[36mGET /static/css/style.css?v=6.1 HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 17:38:56] "[36mGET /static/js/app.js?v=6.1 HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 17:38:56] "[36mGET /static/css/color_picker.css?v=6.1 HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 17:38:56] "[36mGET /static/js/color_picker.js?v=6.1 HTTP/1.1[0m" 304 -
+2026-02-17 17:38:56,069 - app - ERROR - Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/werkzeug/routing/map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+127.0.0.1 - - [17/Feb/2026 17:38:56] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+127.0.0.1 - - [17/Feb/2026 17:39:11] "POST /upload HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:39:28] "POST /calibrate HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:39:34] "POST /detect_auto HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:39:50] "POST /detect_auto HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:40:01] "POST /detect_auto HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:41:14] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:41:14] "[36mGET /static/css/style.css?v=6.1 HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 17:41:14] "[36mGET /static/css/color_picker.css?v=6.1 HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 17:41:14] "[36mGET /static/js/app.js?v=6.1 HTTP/1.1[0m" 304 -
+127.0.0.1 - - [17/Feb/2026 17:41:14] "[36mGET /static/js/color_picker.js?v=6.1 HTTP/1.1[0m" 304 -
+2026-02-17 17:41:14,867 - app - ERROR - Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/flask/ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/Users/dm_chamber/.gemini/antigravity/scratch/AutoPlotDigitizerWeb/venv/lib/python3.9/site-packages/werkzeug/routing/map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+127.0.0.1 - - [17/Feb/2026 17:41:14] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+127.0.0.1 - - [17/Feb/2026 17:41:17] "POST /upload HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:41:39] "POST /calibrate HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:41:55] "POST /detect_auto HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 17:42:00] "POST /detect_auto HTTP/1.1" 200 -

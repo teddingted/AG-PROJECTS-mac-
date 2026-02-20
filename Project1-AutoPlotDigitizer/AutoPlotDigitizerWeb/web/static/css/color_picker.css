@@ -1,0 +1,141 @@
+/* Color picker styles */
+.cursor-color-indicator {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 120px;
+    height: 80px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    border: 3px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1500;
+    pointer-events: none;
+}
+
+.cursor-color-indicator span {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 0.75em;
+    font-weight: 600;
+    color: #333;
+    text-shadow: none;
+}
+
+.color-info-popup {
+    position: absolute;
+    background: white;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.color-swatch {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+}
+
+.color-text {
+    font-size: 0.85em;
+    font-weight: 600;
+    color: #333;
+    line-height: 1.4;
+}
+
+/* Graph table sections */
+.graph-table-section {
+    margin-bottom: 25px;
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    border: 2px solid #667eea;
+}
+
+.graph-table-section h3 {
+    color: #667eea;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.data-table thead {
+    background: #667eea;
+    color: white;
+}
+
+.data-table th,
+.data-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.data-table tbody tr:hover {
+    background: #f8f9ff;
+}
+
+/* Cursor color indicator */
+.cursor-color-indicator {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 120px;
+    height: 80px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    border: 3px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1500;
+    pointer-events: none;
+}
+
+.cursor-color-indicator span {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 0.75em;
+    font-weight: 600;
+    color: #333;
+    text-shadow: none;
+}
+
+/* Magnifier overlay for guided mode */
+.magnifier-overlay {
+    position: fixed;
+    z-index: 2000;
+    pointer-events: none;
+    border-radius: 10px;
+    filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.3));
+}
+
+#image-canvas.guided-cursor {
+    cursor: crosshair;
+}
