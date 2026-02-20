@@ -1,0 +1,36 @@
+# Task: Review V1 and Suggest V2 Improvements
+
+- [x] Review V1 implementation and documentation <!-- id: 0 -->
+    - [x] Read `brain/9696bea7-5064-45c7-bc24-6c8e76ef5502/walkthrough.md` <!-- id: 1 -->
+    - [x] Analyze `scratch/AutoPlotDigitizerV2` codebase structure <!-- id: 2 -->
+    - [x] Analyze `scratch/AutoPlotDigitizerV2/core` <!-- id: 3 -->
+    - [x] Analyze `scratch/AutoPlotDigitizerV2/gui` <!-- id: 4 -->
+- [x] Evaluate V1 architecture <!-- id: 5 -->
+    - [x] Identify strengths and weaknesses <!-- id: 6 -->
+    - [x] Spot potential bottlenecks or scalability issues <!-- id: 7 -->
+- [x] Propose V2 architectural improvements <!-- id: 8 -->
+    - [x] Draft `implementation_plan.md` with suggestions <!-- id: 9 -->
+    - [x] Review plan with user <!-- id: 10 -->
+- [x] Phase 1: Refactoring & Foundation <!-- id: 11 -->
+    - [x] Create `core/series.py` <!-- id: 12 -->
+    - [x] Update `core/calibration.py` <!-- id: 13 -->
+    - [x] Create `core/project.py` <!-- id: 14 -->
+    - [x] Refactor `MainWindow` to use `Project` model <!-- id: 15 -->
+    - [x] Update `ImageCanvas` to support point clearing <!-- id: 16 -->
+- [x] Verification <!-- id: 17 -->
+    - [x] Update `tests/verify_logic.py` for V2 API <!-- id: 18 -->
+    - [x] Run verification script <!-- id: 19 -->
+    - [x] Create walkthroug <!-- id: 20 -->
+- [x] Phase 2: Enhanced Features <!-- id: 21 -->
+    - [x] Implement `undo_last_mask` in `ImageCanvas` <!-- id: 22 -->
+    - [x] Add "Undo Mask" button to `MainWindow` <!-- id: 23 -->
+    - [x] Verify Log Scale UI wiring <!-- id: 24 -->
+- [x] Phase 3: Advanced Features (Perspective & Save/Load) <!-- id: 25 -->
+    - [x] Update `Calibrator` with Homography support <!-- id: 26 -->
+    - [x] Update `MainWindow` to allow 4-corner calibration <!-- id: 27 -->
+    - [x] Verify Perspective correctness <!-- id: 28 -->
+    - [x] Implement `save_project` / `load_project` in `Project` model <!-- id: 29 -->
+    - [x] Add Save/Load UI in `MainWindow` <!-- id: 30 -->
+- [ ] Phase 4: Final Polish & Packaging <!-- id: 31 -->
+    - [ ] Comprehensive Testing <!-- id: 32 -->
+    - [ ] Update Documentation <!-- id: 33 -->

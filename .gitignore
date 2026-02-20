@@ -1,0 +1,20 @@
+# 1. OS 시스템 파일
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# 2. AI 임시 리소스 및 로그 (버전 관리 불필요)
+tempmediaStorage/
+
+# 3. AI 내부 상태 및 메타 데이터 파일 (매우 빈번하게 변경됨)
+*.resolved
+*.resolved.*
+*.metadata.json
+
+# 4. 자동 생성/첨부된 미디어 이미지 무시
+media__*.png
+media__*.jpg
+media__*.jpeg
+media__*.webp
