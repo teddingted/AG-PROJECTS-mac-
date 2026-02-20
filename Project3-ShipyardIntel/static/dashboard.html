@@ -1,0 +1,1547 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>🚢 조선업 커리어 인텔리전스 v2</title>
+  <meta name="description" content="LNG 공정 연구원을 위한 조선업 커리어 인텔리전스 대시보드" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Inter:wght@300;400;600;700&display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+  <style>
+    :root {
+      --bg: #0a0e1a;
+      --bg2: #111827;
+      --card: #1a2235;
+      --card2: #1f2d45;
+      --border: rgba(99, 179, 237, .15);
+      --blue: #3b82f6;
+      --cyan: #06b6d4;
+      --teal: #14b8a6;
+      --gold: #f59e0b;
+      --green: #10b981;
+      --purple: #a78bfa;
+      --red: #ef4444;
+      --txt: #f0f6ff;
+      --txt2: #94a3b8;
+      --muted: #64748b
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box
+    }
+
+    body {
+      font-family: 'Noto Sans KR', 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--txt);
+      min-height: 100vh;
+      overflow-x: hidden
+    }
+
+    /* HEADER */
+    .header {
+      background: rgba(10, 14, 26, .95);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(20px)
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 14px
+    }
+
+    .ship-icon {
+      font-size: 32px;
+      animation: float 3s ease-in-out infinite
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0)
+      }
+
+      50% {
+        transform: translateY(-5px)
+      }
+    }
+
+    .header-title h1 {
+      font-size: 20px;
+      font-weight: 700;
+      background: linear-gradient(90deg, #63b3ed, #06b6d4, #14b8a6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text
+    }
+
+    .header-title p {
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 2px
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 10px
+    }
+
+    .pulse {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 8px var(--green);
+      animation: pulse 2s ease-in-out infinite
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        opacity: 1
+      }
+
+      50% {
+        opacity: .4
+      }
+    }
+
+    .last-upd {
+      font-size: 11px;
+      color: var(--muted)
+    }
+
+    .btn {
+      border: 1px solid;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 12px;
+      font-family: inherit;
+      padding: 7px 14px;
+      transition: all .2s;
+      display: flex;
+      align-items: center;
+      gap: 5px
+    }
+
+    .btn-primary {
+      background: rgba(59, 130, 246, .15);
+      color: #63b3ed;
+      border-color: rgba(59, 130, 246, .3)
+    }
+
+    .btn-primary:hover {
+      background: rgba(59, 130, 246, .3);
+      transform: translateY(-1px)
+    }
+
+    .btn-profile {
+      background: linear-gradient(135deg, rgba(167, 139, 250, .2), rgba(99, 179, 237, .2));
+      color: #c4b5fd;
+      border-color: rgba(167, 139, 250, .3)
+    }
+
+    .btn-profile:hover {
+      background: linear-gradient(135deg, rgba(167, 139, 250, .35), rgba(99, 179, 237, .35));
+      transform: translateY(-1px);
+      box-shadow: 0 4px 16px rgba(167, 139, 250, .2)
+    }
+
+    /* PROFILE BADGE in header */
+    .profile-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(167, 139, 250, .1);
+      border: 1px solid rgba(167, 139, 250, .25);
+      border-radius: 10px;
+      padding: 6px 12px;
+      cursor: pointer;
+      transition: all .2s
+    }
+
+    .profile-badge:hover {
+      background: rgba(167, 139, 250, .2)
+    }
+
+    .profile-avatar {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #7c3aed, #2563eb);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px
+    }
+
+    .profile-info {
+      line-height: 1.3
+    }
+
+    .profile-name {
+      font-size: 12px;
+      font-weight: 600;
+      color: #c4b5fd
+    }
+
+    .profile-role {
+      font-size: 10px;
+      color: var(--muted)
+    }
+
+    /* STATS BAR */
+    .stats-bar {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      padding: 18px 28px;
+      border-bottom: 1px solid var(--border)
+    }
+
+    .stat {
+      background: linear-gradient(135deg, var(--card), var(--card2));
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 18px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      transition: all .3s
+    }
+
+    .stat:hover {
+      border-color: rgba(99, 179, 237, .35);
+      transform: translateY(-2px);
+      box-shadow: 0 0 24px rgba(59, 130, 246, .1)
+    }
+
+    .stat-icon {
+      font-size: 24px;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px
+    }
+
+    .si1 {
+      background: rgba(59, 130, 246, .15)
+    }
+
+    .si2 {
+      background: rgba(16, 185, 129, .15)
+    }
+
+    .si3 {
+      background: rgba(245, 158, 11, .15)
+    }
+
+    .si4 {
+      background: rgba(168, 85, 247, .15)
+    }
+
+    .stat-val {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1
+    }
+
+    .stat-lbl {
+      font-size: 10px;
+      color: var(--muted);
+      margin-top: 3px
+    }
+
+    /* MAIN GRID */
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      padding: 0 28px 28px
+    }
+
+    /* PANEL */
+    .panel {
+      background: linear-gradient(135deg, var(--card), var(--card2));
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column
+    }
+
+    .panel-header {
+      padding: 15px 20px 12px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between
+    }
+
+    .ptitle {
+      display: flex;
+      align-items: center;
+      gap: 8px
+    }
+
+    .ptitle h2 {
+      font-size: 14px;
+      font-weight: 600
+    }
+
+    .pbadge {
+      font-size: 10px;
+      background: rgba(99, 179, 237, .12);
+      color: #63b3ed;
+      padding: 2px 10px;
+      border-radius: 20px;
+      border: 1px solid rgba(99, 179, 237, .2)
+    }
+
+    /* TABS */
+    .tabs {
+      display: flex;
+      border-bottom: 1px solid var(--border);
+      padding: 0 20px
+    }
+
+    .tab {
+      padding: 9px 14px;
+      font-size: 11px;
+      color: var(--muted);
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      transition: all .2s;
+      white-space: nowrap
+    }
+
+    .tab.active {
+      color: #63b3ed;
+      border-bottom-color: #63b3ed
+    }
+
+    .tab.masga {
+      color: var(--gold)
+    }
+
+    .tab.masga.active {
+      color: var(--gold);
+      border-bottom-color: var(--gold)
+    }
+
+    /* SCROLLABLE BODY */
+    .pbody {
+      flex: 1;
+      overflow-y: auto;
+      max-height: 430px;
+      scrollbar-width: thin;
+      scrollbar-color: #1e3a5f transparent
+    }
+
+    .pbody::-webkit-scrollbar {
+      width: 3px
+    }
+
+    .pbody::-webkit-scrollbar-thumb {
+      background: #1e3a5f;
+      border-radius: 2px
+    }
+
+    /* NEWS ITEMS */
+    .news-item {
+      padding: 11px 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, .04);
+      cursor: pointer;
+      text-decoration: none;
+      display: block;
+      color: inherit;
+      transition: background .2s
+    }
+
+    .news-item:hover {
+      background: rgba(99, 179, 237, .05)
+    }
+
+    .news-row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 10px
+    }
+
+    .news-title {
+      font-size: 12.5px;
+      font-weight: 500;
+      line-height: 1.5;
+      flex: 1
+    }
+
+    .news-title.highlight {
+      color: #fde68a
+    }
+
+    .source-badge {
+      font-size: 9px;
+      padding: 2px 7px;
+      border-radius: 4px;
+      white-space: nowrap;
+      font-weight: 500;
+      flex-shrink: 0;
+      margin-top: 2px
+    }
+
+    .sb-company {
+      background: rgba(16, 185, 129, .2);
+      color: #34d399
+    }
+
+    .sb-policy {
+      background: rgba(59, 130, 246, .2);
+      color: #60a5fa
+    }
+
+    .sb-intl {
+      background: rgba(245, 158, 11, .2);
+      color: #fbbf24
+    }
+
+    .sb-masga {
+      background: rgba(239, 68, 68, .2);
+      color: #f87171
+    }
+
+    .news-date {
+      font-size: 10px;
+      color: var(--muted);
+      margin-top: 4px
+    }
+
+    /* JOB SALARY INTEL */
+    .job-item {
+      padding: 13px 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, .04);
+      transition: background .2s
+    }
+
+    .job-item:hover {
+      background: rgba(245, 158, 11, .04)
+    }
+
+    .job-title-link {
+      font-size: 13px;
+      font-weight: 600;
+      color: #fbbf24;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 4px
+    }
+
+    .job-title-link:hover {
+      text-decoration: underline
+    }
+
+    .job-company {
+      font-size: 11px;
+      color: var(--txt2);
+      margin-bottom: 6px
+    }
+
+    .salary-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: linear-gradient(135deg, rgba(167, 139, 250, .2), rgba(99, 179, 237, .15));
+      border: 1px solid rgba(167, 139, 250, .3);
+      border-radius: 6px;
+      padding: 4px 10px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #c4b5fd
+    }
+
+    .salary-pill.estimated {
+      background: rgba(100, 116, 139, .1);
+      border-color: rgba(100, 116, 139, .2);
+      color: var(--muted)
+    }
+
+    .job-meta {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-top: 6px
+    }
+
+    .jtag {
+      font-size: 10px;
+      padding: 2px 7px;
+      border-radius: 4px;
+      background: rgba(245, 158, 11, .1);
+      color: var(--gold);
+      border: 1px solid rgba(245, 158, 11, .2)
+    }
+
+    /* SALARY LIST */
+    .salary-filter {
+      display: flex;
+      gap: 5px;
+      padding: 10px 20px;
+      border-bottom: 1px solid var(--border);
+      flex-wrap: wrap
+    }
+
+    .fbtn {
+      font-size: 10px;
+      padding: 3px 10px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      font-family: inherit;
+      transition: all .2s
+    }
+
+    .fbtn.active,
+    .fbtn:hover {
+      background: rgba(59, 130, 246, .15);
+      color: #63b3ed;
+      border-color: rgba(59, 130, 246, .3)
+    }
+
+    .chart-wrap {
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--border)
+    }
+
+    .sal-row {
+      padding: 11px 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, .03);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      transition: background .2s
+    }
+
+    .sal-row:hover {
+      background: rgba(167, 139, 250, .04)
+    }
+
+    .sal-role {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--txt)
+    }
+
+    .sal-co {
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 2px
+    }
+
+    .sal-exp {
+      font-size: 10px;
+      color: var(--muted);
+      margin-top: 1px
+    }
+
+    .sal-avg {
+      font-size: 14px;
+      font-weight: 700;
+      background: linear-gradient(90deg, #a78bfa, #c4b5fd);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-align: right
+    }
+
+    .sal-range {
+      font-size: 10px;
+      color: var(--muted);
+      margin-top: 2px;
+      text-align: right
+    }
+
+    /* LINKEDIN */
+    .li-section {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--muted);
+      padding: 12px 20px 6px;
+      font-weight: 600
+    }
+
+    .li-card {
+      padding: 11px 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, .03);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      transition: background .2s
+    }
+
+    .li-card:hover {
+      background: rgba(10, 102, 194, .06)
+    }
+
+    .li-name {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--txt)
+    }
+
+    .li-desc {
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 2px
+    }
+
+    .btn-follow {
+      font-size: 11px;
+      padding: 4px 12px;
+      border-radius: 6px;
+      background: rgba(10, 102, 194, .2);
+      color: #60a5fa;
+      border: 1px solid rgba(10, 102, 194, .3);
+      text-decoration: none;
+      white-space: nowrap;
+      transition: all .2s;
+      display: flex;
+      align-items: center;
+      gap: 3px
+    }
+
+    .btn-follow:hover {
+      background: rgba(10, 102, 194, .35);
+      transform: translateY(-1px)
+    }
+
+    .search-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 7px;
+      padding: 12px 20px
+    }
+
+    .qs {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      padding: 9px 12px;
+      background: rgba(59, 130, 246, .08);
+      border: 1px solid rgba(59, 130, 246, .15);
+      border-radius: 8px;
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 11px;
+      transition: all .2s
+    }
+
+    .qs:hover {
+      background: rgba(59, 130, 246, .2);
+      transform: translateY(-1px)
+    }
+
+    /* EMPTY / LOADING */
+    .empty {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 36px;
+      color: var(--muted);
+      gap: 8px
+    }
+
+    .empty .ico {
+      font-size: 32px;
+      opacity: .4
+    }
+
+    .empty p {
+      font-size: 12px
+    }
+
+    .loader {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 36px;
+      gap: 10px;
+      color: var(--muted);
+      font-size: 12px
+    }
+
+    .spin {
+      width: 22px;
+      height: 22px;
+      border: 2px solid var(--border);
+      border-top-color: #63b3ed;
+      border-radius: 50%;
+      animation: spin .8s linear infinite
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg)
+      }
+    }
+
+    /* PROFILE SLIDE PANEL */
+    .profile-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, .5);
+      z-index: 200;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .3s;
+      backdrop-filter: blur(4px)
+    }
+
+    .profile-overlay.open {
+      opacity: 1;
+      pointer-events: all
+    }
+
+    .profile-panel {
+      position: fixed;
+      right: -480px;
+      top: 0;
+      bottom: 0;
+      width: 480px;
+      background: #111827;
+      border-left: 1px solid var(--border);
+      z-index: 201;
+      transition: right .3s cubic-bezier(.34, 1.56, .64, 1);
+      overflow-y: auto;
+      padding: 0
+    }
+
+    .profile-panel.open {
+      right: 0
+    }
+
+    .pp-header {
+      padding: 20px 24px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      background: #111827;
+      z-index: 1
+    }
+
+    .pp-header h2 {
+      font-size: 16px;
+      font-weight: 700;
+      background: linear-gradient(90deg, #c4b5fd, #93c5fd);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text
+    }
+
+    .pp-close {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      border-radius: 8px;
+      padding: 6px 12px;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 12px;
+      transition: all .2s
+    }
+
+    .pp-close:hover {
+      border-color: rgba(99, 179, 237, .4);
+      color: var(--txt)
+    }
+
+    .pp-body {
+      padding: 20px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px
+    }
+
+    .form-section {
+      background: rgba(255, 255, 255, .03);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px
+    }
+
+    .form-section h3 {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--muted);
+      margin-bottom: 12px;
+      font-weight: 600
+    }
+
+    .form-row {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      margin-bottom: 10px
+    }
+
+    .form-row:last-child {
+      margin-bottom: 0
+    }
+
+    .form-row label {
+      font-size: 11px;
+      color: var(--txt2)
+    }
+
+    .form-row input,
+    .form-row textarea,
+    .form-row select {
+      background: rgba(255, 255, 255, .05);
+      border: 1px solid var(--border);
+      border-radius: 7px;
+      color: var(--txt);
+      font-family: inherit;
+      font-size: 12px;
+      padding: 8px 12px;
+      transition: border .2s;
+      width: 100%
+    }
+
+    .form-row input:focus,
+    .form-row textarea:focus {
+      outline: none;
+      border-color: rgba(99, 179, 237, .5)
+    }
+
+    .form-row textarea {
+      resize: vertical;
+      height: 60px
+    }
+
+    .li-fetch-row {
+      display: flex;
+      gap: 8px;
+      align-items: flex-end
+    }
+
+    .li-fetch-row input {
+      flex: 1
+    }
+
+    .btn-fetch {
+      background: rgba(10, 102, 194, .2);
+      color: #60a5fa;
+      border: 1px solid rgba(10, 102, 194, .3);
+      border-radius: 7px;
+      padding: 8px 14px;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 11px;
+      white-space: nowrap;
+      transition: all .2s
+    }
+
+    .btn-fetch:hover {
+      background: rgba(10, 102, 194, .35)
+    }
+
+    .btn-fetch.loading {
+      opacity: .6;
+      cursor: not-allowed
+    }
+
+    .pp-save {
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(135deg, #4f46e5, #0891b2);
+      border: none;
+      border-radius: 10px;
+      color: white;
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all .2s
+    }
+
+    .btn-profile-tag {
+      font-size: 10px;
+      padding: 2px 8px;
+      border-radius: 4px;
+      border: 1px solid rgba(167, 139, 250, .3);
+      background: rgba(167, 139, 250, .1);
+      color: #c4b5fd;
+      margin-left: 4px
+    }
+
+    .pp-save:hover {
+      background: linear-gradient(135deg, #5c52f0, #0e9dc2);
+      box-shadow: 0 4px 20px rgba(79, 70, 229, .3)
+    }
+
+    /* PROFILE MATCH SECTION */
+    .profile-match {
+      background: linear-gradient(135deg, rgba(167, 139, 250, .1), rgba(99, 179, 237, .08));
+      border: 1px solid rgba(167, 139, 250, .2);
+      border-radius: 10px;
+      padding: 14px 20px;
+      margin: 0 28px 0
+    }
+
+    .pm-title {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: .07em;
+      color: #a78bfa;
+      font-weight: 600;
+      margin-bottom: 8px
+    }
+
+    .pm-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px
+    }
+
+    .pm-chip {
+      font-size: 11px;
+      padding: 3px 10px;
+      border-radius: 20px;
+      background: rgba(167, 139, 250, .15);
+      color: #c4b5fd;
+      border: 1px solid rgba(167, 139, 250, .2)
+    }
+
+    .pm-chip.target {
+      background: rgba(245, 158, 11, .1);
+      color: #fbbf24;
+      border-color: rgba(245, 158, 11, .2)
+    }
+
+    /* TOAST */
+    .toast {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 11px 18px;
+      font-size: 12px;
+      color: var(--txt);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, .4);
+      transform: translateY(200%);
+      transition: transform .3s cubic-bezier(.34, 1.56, .64, 1);
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      gap: 7px
+    }
+
+    .toast.show {
+      transform: translateY(0)
+    }
+
+    .toast-ok {
+      border-left: 3px solid var(--green)
+    }
+
+    .toast-err {
+      border-left: 3px solid var(--red)
+    }
+
+    @media(max-width:900px) {
+      .stats-bar {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .grid {
+        grid-template-columns: 1fr
+      }
+
+      .profile-panel {
+        width: 100%;
+        right: -100%
+      }
+
+      .grid {
+        padding: 0 16px 16px
+      }
+
+      .stats-bar {
+        padding: 16px
+      }
+
+      .header {
+        padding: 14px 16px
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-left">
+      <div class="ship-icon">🚢</div>
+      <div class="header-title">
+        <h1>조선업 커리어 인텔리전스</h1>
+        <p id="headerSub">뉴스 · 기업 · 연봉 · LinkedIn – 한눈에 보기</p>
+      </div>
+    </div>
+    <div class="header-right">
+      <div class="pulse" title="실시간 업데이트 중"></div>
+      <span class="last-upd" id="lastUpd">로딩 중...</span>
+      <button class="btn btn-primary" onclick="triggerRefresh()">🔄 갱신</button>
+      <div class="profile-badge" onclick="openProfile()">
+        <div class="profile-avatar">👤</div>
+        <div class="profile-info">
+          <div class="profile-name" id="hdrName">내 프로필</div>
+          <div class="profile-role" id="hdrRole">⚙️ 설정하기</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- PROFILE MATCH BAR (프로필 있을 때만 표시) -->
+  <div class="profile-match" id="profileMatchBar"
+    style="display:none;margin-top:0;border-radius:0;border-top:none;border-left:none;border-right:none;border-bottom:1px solid var(--border);padding:10px 28px">
+    <div class="pm-title">💡 내 프로필 기반 추천 필터</div>
+    <div class="pm-chips" id="profileChips"></div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stats-bar">
+    <div class="stat">
+      <div class="stat-icon si1">📰</div>
+      <div>
+        <div class="stat-val" id="sNews">-</div>
+        <div class="stat-lbl">조선 뉴스</div>
+      </div>
+    </div>
+    <div class="stat">
+      <div class="stat-icon si2">🏢</div>
+      <div>
+        <div class="stat-val" id="sCo">-</div>
+        <div class="stat-lbl">타겟 기업</div>
+      </div>
+    </div>
+    <div class="stat">
+      <div class="stat-icon si3">💼</div>
+      <div>
+        <div class="stat-val" id="sJobs">-</div>
+        <div class="stat-lbl">채용 공고</div>
+      </div>
+    </div>
+    <div class="stat">
+      <div class="stat-icon si4">💰</div>
+      <div>
+        <div class="stat-val" id="sSal">-</div>
+        <div class="stat-lbl">연봉 데이터</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN GRID -->
+  <div class="grid" style="margin-top:12px">
+
+    <!-- ① 업계 뉴스 (3탭) -->
+    <div class="panel">
+      <div class="panel-header">
+        <div class="ptitle"><span>📰</span>
+          <h2>업계 뉴스</h2>
+        </div>
+        <span class="pbadge" id="newsCnt">로딩중</span>
+      </div>
+      <div class="tabs">
+        <div class="tab active" onclick="filterNews('ko_company',this)">🇰🇷 조선 3사</div>
+        <div class="tab" onclick="filterNews('ko_policy',this)">📋 정책</div>
+        <div class="tab masga" onclick="filterNews('international',this)">🌍 MASGA·국제</div>
+      </div>
+      <div class="pbody" id="newsList">
+        <div class="loader">
+          <div class="spin"></div>뉴스 로딩 중...
+        </div>
+      </div>
+    </div>
+
+    <!-- ② Job Salary Intel -->
+    <div class="panel">
+      <div class="panel-header">
+        <div class="ptitle"><span>💼</span>
+          <h2>Job Salary Intel</h2>
+        </div>
+        <span class="pbadge" id="jobCnt">로딩중</span>
+      </div>
+      <div class="tabs">
+        <div class="tab active" onclick="showJobTab('salary',this)">💰 연봉 명시 공고</div>
+        <div class="tab" onclick="showJobTab('all',this)">전체 공고</div>
+        <div class="tab" onclick="showJobTab('companies',this)">🏢 기업 정보</div>
+      </div>
+      <div class="pbody" id="jobPanel">
+        <div class="loader">
+          <div class="spin"></div>채용 데이터 로딩 중...
+        </div>
+      </div>
+    </div>
+
+    <!-- ③ 연봉 비교 -->
+    <div class="panel">
+      <div class="panel-header">
+        <div class="ptitle"><span>💰</span>
+          <h2>연봉 국제 비교</h2>
+        </div>
+        <span class="pbadge" id="salCnt">로딩중</span>
+      </div>
+      <div class="salary-filter" id="salFilter">
+        <button class="fbtn active" onclick="filterSal('all',this)">전체</button>
+        <button class="fbtn" onclick="filterSal('LNG',this)">LNG 공정</button>
+        <button class="fbtn" onclick="filterSal('카타르',this)">🇶🇦 카타르</button>
+        <button class="fbtn" onclick="filterSal('노르웨이',this)">🇳🇴 노르웨이</button>
+        <button class="fbtn" onclick="filterSal('프랑스',this)">🇫🇷 프랑스</button>
+        <button class="fbtn" onclick="filterSal('기업별',this)">기업별 평균</button>
+      </div>
+      <div class="chart-wrap" id="chartWrap" style="display:none"><canvas id="salChart" height="130"></canvas></div>
+      <div class="pbody" id="salList">
+        <div class="loader">
+          <div class="spin"></div>연봉 데이터 로딩 중...
+        </div>
+      </div>
+    </div>
+
+    <!-- ④ LinkedIn 네트워크 -->
+    <div class="panel">
+      <div class="panel-header">
+        <div class="ptitle"><span>🔗</span>
+          <h2>LinkedIn 네트워크</h2>
+        </div>
+        <span class="pbadge" onclick="openProfile()" style="cursor:pointer">👤 내 프로필 연동</span>
+      </div>
+      <div class="tabs">
+        <div class="tab active" onclick="showLiTab('companies',this)">기업 팔로우</div>
+        <div class="tab" onclick="showLiTab('groups',this)">그룹</div>
+        <div class="tab" onclick="showLiTab('search',this)">채용 검색</div>
+      </div>
+      <div class="pbody" id="liPanel">
+        <div class="loader">
+          <div class="spin"></div>LinkedIn 데이터 로딩 중...
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROFILE OVERLAY -->
+  <div class="profile-overlay" id="profileOverlay" onclick="closeProfile()"></div>
+
+  <!-- MY PROFILE SLIDE PANEL -->
+  <div class="profile-panel" id="profilePanel">
+    <div class="pp-header">
+      <h2>⚙️ 내 커리어 프로필</h2>
+      <button class="pp-close" onclick="closeProfile()">✕ 닫기</button>
+    </div>
+    <div class="pp-body">
+
+      <!-- LinkedIn 연동 -->
+      <div class="form-section">
+        <h3>🔗 LinkedIn 연동</h3>
+        <div class="form-row">
+          <label>LinkedIn 프로필 URL</label>
+          <div class="li-fetch-row">
+            <input type="url" id="liUrl" placeholder="https://www.linkedin.com/in/your-id" />
+            <button class="btn-fetch" id="fetchBtn" onclick="fetchLinkedIn()">자동 수집</button>
+          </div>
+        </div>
+        <div class="form-row">
+          <label>자동 수집된 헤드라인</label>
+          <input type="text" id="liHeadline" placeholder="자동 수집 또는 직접 입력" />
+        </div>
+        <div class="form-row">
+          <label>자동 수집된 스킬 (쉼표 구분)</label>
+          <textarea id="liSkills" placeholder="LNG, 공정설계, Chemical Engineering, ..."></textarea>
+        </div>
+      </div>
+
+      <!-- 현재 커리어 -->
+      <div class="form-section">
+        <h3>💼 현재 커리어</h3>
+        <div class="form-row">
+          <label>현재 회사</label>
+          <input type="text" id="curCompany" placeholder="예: HD한국조선해양" />
+        </div>
+        <div class="form-row">
+          <label>직함 / 직위</label>
+          <input type="text" id="curTitle" placeholder="예: LNG 액화설비 공정 연구원" />
+        </div>
+        <div class="form-row">
+          <label>경력 년수</label>
+          <input type="number" id="expYears" min="0" max="50" placeholder="2" />
+        </div>
+        <div class="form-row">
+          <label>최종 학력</label>
+          <input type="text" id="edu" placeholder="예: 화학공학 석사 (연세대학교)" />
+        </div>
+        <div class="form-row">
+          <label>핵심 스킬 / 기술 (쉼표 구분)</label>
+          <textarea id="skills" placeholder="LNG 액화공정, 공정설계, HYSYS, 열역학, Chemical Engineering"></textarea>
+        </div>
+      </div>
+
+      <!-- 해외 취업 목표 -->
+      <div class="form-section">
+        <h3>🌍 해외 취업 목표</h3>
+        <div class="form-row">
+          <label>타겟 국가 (쉼표 구분)</label>
+          <input type="text" id="targetCountries" placeholder="Qatar, Norway, France, Singapore" />
+        </div>
+        <div class="form-row">
+          <label>타겟 직무 (쉼표 구분)</label>
+          <input type="text" id="targetRoles" placeholder="LNG Process Engineer, Liquefaction Engineer" />
+        </div>
+      </div>
+
+      <button class="pp-save" onclick="saveProfile()">💾 프로필 저장 & 대시보드 개인화</button>
+    </div>
+  </div>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast"></div>
+
+  <script>
+    // ── STATE
+    let allNews = [], allCompanies = [], allJobs = [], allSalaries = [], liData = {}, myProfile = {};
+    let curNewsCat = 'ko_company', curJobTab = 'salary', curLiTab = 'companies', curSalFilter = 'all';
+    let salChart = null;
+
+    // ── TOAST
+    function toast(msg, type = 'ok') {
+      const t = document.getElementById('toast');
+      t.innerHTML = (type === 'ok' ? '✅ ' : '❌ ') + msg;
+      t.className = `toast show toast-${type}`;
+      setTimeout(() => { t.className = 'toast' }, 3200);
+    }
+
+    // ── PROFILE PANEL
+    function openProfile() {
+      document.getElementById('profileOverlay').classList.add('open');
+      document.getElementById('profilePanel').classList.add('open');
+      loadProfileForm();
+    }
+    function closeProfile() {
+      document.getElementById('profileOverlay').classList.remove('open');
+      document.getElementById('profilePanel').classList.remove('open');
+    }
+
+    function loadProfileForm() {
+      const p = myProfile;
+      document.getElementById('liUrl').value = p.linkedin_url || '';
+      document.getElementById('liHeadline').value = p.linkedin_headline || '';
+      document.getElementById('liSkills').value = p.linkedin_skills || '';
+      document.getElementById('curCompany').value = p.current_company || '';
+      document.getElementById('curTitle').value = p.current_title || '';
+      document.getElementById('expYears').value = p.experience_years || '';
+      document.getElementById('edu').value = p.education || '';
+      document.getElementById('skills').value = p.skills || '';
+      document.getElementById('targetCountries').value = p.target_countries || '';
+      document.getElementById('targetRoles').value = p.target_roles || '';
+    }
+
+    async function fetchLinkedIn() {
+      const url = document.getElementById('liUrl').value.trim();
+      if (!url) { toast('LinkedIn URL을 입력하세요', 'err'); return; }
+      const btn = document.getElementById('fetchBtn');
+      btn.classList.add('loading'); btn.textContent = '수집 중...';
+      try {
+        const r = await fetch('/api/profile/fetch-linkedin', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ linkedin_url: url }) });
+        const d = await r.json();
+        if (d.data) {
+          if (d.data.linkedin_headline) document.getElementById('liHeadline').value = d.data.linkedin_headline;
+          if (d.data.linkedin_skills) document.getElementById('liSkills').value = d.data.linkedin_skills;
+          toast('LinkedIn 정보 수집 완료!');
+        } else {
+          toast(d.message || '수집 실패 - 수동 입력해 주세요', 'err');
+        }
+      } catch (e) { toast('수집 오류. 수동 입력해 주세요', 'err'); }
+      btn.classList.remove('loading'); btn.textContent = '자동 수집';
+    }
+
+    async function saveProfile() {
+      const data = {
+        linkedin_url: document.getElementById('liUrl').value,
+        current_company: document.getElementById('curCompany').value,
+        current_title: document.getElementById('curTitle').value,
+        experience_years: parseInt(document.getElementById('expYears').value) || 0,
+        education: document.getElementById('edu').value,
+        skills: document.getElementById('skills').value,
+        target_countries: document.getElementById('targetCountries').value,
+        target_roles: document.getElementById('targetRoles').value,
+        linkedin_headline: document.getElementById('liHeadline').value,
+        linkedin_experience: '',
+        linkedin_skills: document.getElementById('liSkills').value,
+      };
+      try {
+        await fetch('/api/profile', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
+        myProfile = data;
+        updateProfileUI();
+        closeProfile();
+        toast('프로필 저장 완료! 대시보드가 개인화됩니다.');
+        renderNews(); renderJobs(); renderSalList();
+      } catch (e) { toast('저장 실패', 'err'); }
+    }
+
+    function updateProfileUI() {
+      const p = myProfile;
+      const name = p.current_title || '내 프로필';
+      const role = p.current_company ? `@ ${p.current_company}` : '⚙️ 설정하기';
+      document.getElementById('hdrName').textContent = name.length > 16 ? name.slice(0, 16) + '…' : name;
+      document.getElementById('hdrRole').textContent = role;
+      document.getElementById('headerSub').textContent =
+        p.target_countries ? `타겟: ${p.target_countries} | 스킬: ${(p.skills || '').split(',').slice(0, 3).join(', ')}`
+          : '뉴스 · 기업 · 연봉 · LinkedIn – 한눈에 보기';
+
+      // Profile match bar
+      const bar = document.getElementById('profileMatchBar');
+      const chips = document.getElementById('profileChips');
+      if (p.current_company || p.skills) {
+        bar.style.display = 'block';
+        const skillArr = (p.skills || '').split(',').map(s => s.trim()).filter(Boolean);
+        const countryArr = (p.target_countries || '').split(',').map(s => s.trim()).filter(Boolean);
+        chips.innerHTML = [
+          ...skillArr.slice(0, 4).map(s => `<span class="pm-chip">${e(s)}</span>`),
+          ...countryArr.map(c => `<span class="pm-chip target">🎯 ${e(c)}</span>`)
+        ].join('');
+      } else {
+        bar.style.display = 'none';
+      }
+    }
+
+    // ── FETCH ALL DATA
+    async function fetchAll() {
+      try {
+        const [nR, cR, jR, sR, lR, pR] = await Promise.all([
+          fetch(`/api/news?category=${curNewsCat}&limit=50`).then(r => r.json()),
+          fetch('/api/companies').then(r => r.json()),
+          fetch('/api/jobs?limit=60').then(r => r.json()),
+          fetch('/api/salaries').then(r => r.json()),
+          fetch('/api/linkedin').then(r => r.json()),
+          fetch('/api/profile').then(r => r.json()),
+        ]);
+        allNews = nR.data || []; allCompanies = cR.data || []; allJobs = jR.data || []; allSalaries = sR.data || []; liData = lR; myProfile = pR.data || {};
+        document.getElementById('sNews').textContent = allNews.length;
+        document.getElementById('sCo').textContent = allCompanies.length;
+        document.getElementById('sJobs').textContent = allJobs.length;
+        document.getElementById('sSal').textContent = allSalaries.length;
+        const now = new Date();
+        document.getElementById('lastUpd').textContent = `업데이트: ${now.toLocaleTimeString('ko-KR')}`;
+        updateProfileUI(); renderNews(); renderJobs(); renderSalList(); renderLinkedIn();
+      } catch (er) { toast('서버 연결 오류', 'err'); }
+    }
+
+    // ── NEWS
+    function filterNews(cat, el) {
+      curNewsCat = cat;
+      el.parentElement.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      el.classList.add('active');
+      // Re-fetch news for this category
+      fetch(`/api/news?category=${cat}&limit=50`).then(r => r.json()).then(d => {
+        allNews = d.data || [];
+        document.getElementById('newsCnt').textContent = allNews.length + '건';
+        renderNews();
+      });
+    }
+
+    function renderNews() {
+      const list = document.getElementById('newsList');
+      document.getElementById('newsCnt').textContent = allNews.length + '건';
+      if (!allNews.length) {
+        list.innerHTML = `<div class="empty"><div class="ico">📭</div><p>뉴스 없음 – 갱신 버튼을 눌러보세요</p></div>`;
+        return;
+      }
+      const userSkills = (myProfile.skills || '').toLowerCase().split(',').map(s => s.trim()).filter(Boolean);
+      list.innerHTML = allNews.map(n => {
+        const isMasga = n.title.includes('[MASGA]') || n.title.includes('🇺🇸');
+        const isHighlight = userSkills.some(sk => n.title.toLowerCase().includes(sk));
+        const badgeCls = n.category === 'ko_company' ? 'sb-company' : n.category === 'ko_policy' ? 'sb-policy' : isMasga ? 'sb-masga' : 'sb-intl';
+        const srcLabel = n.source || n.category;
+        return `<a class="news-item" href="${e(n.url)}" target="_blank" rel="noopener">
+      <div class="news-row">
+        <div class="news-title${isHighlight ? ' highlight' : ''}">${e(n.title)}</div>
+        <span class="source-badge ${badgeCls}">${e(srcLabel)}</span>
+      </div>
+      <div class="news-date">${n.published_at || ''}</div>
+    </a>`;
+      }).join('');
+    }
+
+    // ── JOBS
+    function showJobTab(tab, el) {
+      curJobTab = tab;
+      el.parentElement.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      el.classList.add('active');
+      renderJobs();
+    }
+
+    function renderJobs() {
+      const panel = document.getElementById('jobPanel');
+      document.getElementById('jobCnt').textContent = curJobTab === 'companies' ? allCompanies.length + '개사' : allJobs.length + '건';
+
+      if (curJobTab === 'companies') {
+        if (!allCompanies.length) { panel.innerHTML = `<div class="empty"><div class="ico">🏗️</div><p>기업 데이터 로딩 중</p></div>`; return; }
+        panel.innerHTML = allCompanies.map(c => `
+      <div class="job-item">
+        <a class="job-title-link" href="${e(c.website || '#')}" target="_blank">${e(c.name)}</a>
+        <div class="job-company">${e(c.name_en || '')} · ${e(c.hq || '')}</div>
+        <div style="font-size:11px;color:var(--txt2);line-height:1.5;margin-bottom:8px">${e((c.description || '').slice(0, 120))}${(c.description || '').length > 120 ? '…' : ''}</div>
+        <div style="display:flex;gap:7px;flex-wrap:wrap">
+          ${c.website ? `<a href="${e(c.website)}" target="_blank" class="qs" style="padding:4px 10px">🌐 홈페이지</a>` : ''}
+          ${c.job_page_url ? `<a href="${e(c.job_page_url)}" target="_blank" class="qs" style="padding:4px 10px">💼 채용</a>` : ''}
+          ${c.linkedin_url ? `<a href="${e(c.linkedin_url)}" target="_blank" class="qs" style="padding:4px 10px">🔗 LinkedIn</a>` : ''}
+        </div>
+      </div>`).join('');
+        return;
+      }
+
+      let jobs = curJobTab === 'salary' ? allJobs.filter(j => j.salary && j.salary.trim() && j.salary !== '-') : allJobs;
+      if (!jobs.length && curJobTab === 'salary') jobs = allJobs; // fallback
+
+      if (!jobs.length) { panel.innerHTML = `<div class="empty"><div class="ico">📋</div><p>채용 데이터 없음</p></div>`; return; }
+      panel.innerHTML = jobs.map(j => {
+        const hasSalary = j.salary && j.salary.trim() && j.salary !== '-';
+        return `<div class="job-item">
+      <a class="job-title-link" href="${e(j.url)}" target="_blank">${e(j.title)}</a>
+      <div class="job-company">🏢 ${e(j.company || '')}</div>
+      <div class="salary-pill${hasSalary ? '' : ' estimated'}">
+        ${hasSalary ? '💰 ' + e(j.salary) : '💰 연봉 협의'}
+      </div>
+      <div class="job-meta">
+        <span class="jtag">📌 ${e(j.source || '')}</span>
+        ${j.location ? `<span class="jtag">📍 ${e(j.location.slice(0, 40))}</span>` : ''}
+        ${j.posted_at ? `<span class="jtag">📅 ${e(j.posted_at)}</span>` : ''}
+      </div>
+    </div>`;
+      }).join('');
+    }
+
+    // ── SALARY
+    function filterSal(kw, el) {
+      curSalFilter = kw;
+      document.querySelectorAll('#salFilter .fbtn').forEach(b => b.classList.remove('active'));
+      el.classList.add('active');
+      renderSalList();
+    }
+
+    function renderSalList() {
+      const list = document.getElementById('salList');
+      let items = allSalaries;
+      if (curSalFilter !== 'all') items = allSalaries.filter(s =>
+        (s.job_title + s.company + s.avg_salary + s.experience_level).includes(curSalFilter));
+      document.getElementById('salCnt').textContent = items.length + '건';
+
+      const wrap = document.getElementById('chartWrap');
+      if (curSalFilter === '기업별' && items.length) { wrap.style.display = 'block'; renderChart(items); }
+      else { wrap.style.display = 'none'; if (salChart) { salChart.destroy(); salChart = null; } }
+
+      if (!items.length) { list.innerHTML = `<div class="empty"><div class="ico">💹</div><p>데이터 없음</p></div>`; return; }
+      list.innerHTML = items.map(s => `
+    <div class="sal-row">
+      <div>
+        <div class="sal-role">${e(s.job_title)}</div>
+        <div class="sal-co">${e(s.company || '')}</div>
+        <div class="sal-exp">${e(s.experience_level || '')} · ${e(s.source || '')}</div>
+      </div>
+      <div>
+        <div class="sal-avg">${e(s.avg_salary || '-')}</div>
+        ${s.min_salary && s.max_salary ? `<div class="sal-range">${e(s.min_salary)} ~ ${e(s.max_salary)}</div>` : ''}
+      </div>
+    </div>`).join('');
+    }
+
+    function renderChart(items) {
+      const ctx = document.getElementById('salChart').getContext('2d');
+      if (salChart) salChart.destroy();
+      const labels = items.map(i => i.company);
+      const vals = items.map(i => { const m = (i.avg_salary || '').match(/[\d,]+/); return m ? parseInt(m[0].replace(/,/g, '')) : 0; });
+      salChart = new Chart(ctx, { type: 'bar', data: { labels, datasets: [{ label: '평균연봉', data: vals, backgroundColor: ['rgba(99,179,237,.7)', 'rgba(16,185,129,.7)', 'rgba(245,158,11,.7)', 'rgba(168,85,247,.7)', 'rgba(239,68,68,.7)'], borderRadius: 6, borderWidth: 0 }] }, options: { responsive: true, plugins: { legend: { display: false }, tooltip: { callbacks: { label: c => `${c.parsed.y.toLocaleString()}만원` } } }, scales: { x: { ticks: { color: '#94a3b8', font: { size: 9 } }, grid: { display: false } }, y: { ticks: { color: '#94a3b8', font: { size: 9 } }, grid: { color: 'rgba(255,255,255,.04)' } } } } });
+    }
+
+    // ── LINKEDIN
+    function showLiTab(tab, el) {
+      curLiTab = tab;
+      el.parentElement.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      el.classList.add('active');
+      renderLinkedIn();
+    }
+
+    function renderLinkedIn() {
+      const panel = document.getElementById('liPanel');
+      if (!liData.company_pages) { panel.innerHTML = `<div class="loader"><div class="spin"></div></div>`; return; }
+      if (curLiTab === 'companies') {
+        const pages = liData.company_pages || [];
+        panel.innerHTML = `<div class="li-section">✅ 팔로우 추천 (${pages.length}개)</div>` +
+          pages.map(p => `<div class="li-card">
+        <div><div class="li-name">${e(p.name)}</div><div class="li-desc">${e(p.description)}</div></div>
+        <a href="${e(p.url)}" target="_blank" class="btn-follow">🔗 팔로우</a>
+      </div>`).join('');
+      } else if (curLiTab === 'groups') {
+        const groups = liData.groups || [];
+        panel.innerHTML = `<div class="li-section">💬 추천 그룹 (${groups.length}개)</div>` +
+          groups.map(g => `<div class="li-card">
+        <div><div class="li-name">${e(g.name)}</div><div class="li-desc">${e(g.description)}</div></div>
+        <a href="${e(g.url)}" target="_blank" class="btn-follow">💬 가입</a>
+      </div>`).join('');
+      } else {
+        const searches = liData.quick_searches || [];
+        panel.innerHTML = `<div class="li-section">🔍 LNG 특화 채용 검색</div><div class="search-grid">` +
+          searches.map(s => `<a href="${e(s.url)}" target="_blank" class="qs">🔍 ${e(s.label)}</a>`).join('') + '</div>';
+      }
+    }
+
+    // ── REFRESH
+    async function triggerRefresh() {
+      toast('크롤링 시작! 30초 후 자동 갱신됩니다.');
+      try { await fetch('/api/refresh', { method: 'POST' }); } catch (e) { }
+      setTimeout(fetchAll, 30000);
+    }
+
+    // ── UTILS
+    function e(str) {
+      if (!str) return '';
+      return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    }
+
+    // ── INIT
+    fetchAll();
+    setInterval(fetchAll, 5 * 60 * 1000);
+  </script>
+</body>
+
+</html>
